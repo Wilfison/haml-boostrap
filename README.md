@@ -1,3 +1,3 @@
-# HAML boostrap 4,5 for VS Code
+# HAML boostrap 4,5 Snippets for VS Code
 
 working in progress
