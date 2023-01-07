@@ -1,0 +1,9 @@
+.btn-group{"aria-label": "$1", role: "group"}
+  %button.btn.btn-secondary{type: "button"} $2
+  %button.btn.btn-secondary{type: "button"} $3
+  .btn-group{role: "group"}
+    %button.btn.btn-secondary.dropdown-toggle{"aria-expanded": "false", "aria-haspopup": "true", "data-toggle": "dropdown", id: "${5:dropdownId}", type: "button"}
+      $4
+    .dropdown-menu{"aria-labelledby": "${5:dropdownId}"}
+      %a.dropdown-item{href: "${7:#}"} $6
+      %a.dropdown-item{href: "${9:#}"} $8

@@ -1,0 +1,5 @@
+%form.form-inline
+  .form-group
+    %label{for: "$4"} $1
+    %input.form-control{"aria-describedby": "${5:helpId}", id: "$4", name: "$4", placeholder: "$2", type: "${3:text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week}"}/
+    %small.text-muted{id: "${5:helpId}"} ${6:Help text}

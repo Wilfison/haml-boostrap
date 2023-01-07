@@ -1,0 +1,16 @@
+%table.table{class: "table-${1:striped|sm|bordered|hover|inverse} ${2:table-inverse} ${3:table-responsive}"}
+  %thead{class: "${4:thead-inverse|thead-default}"}
+    %tr
+      %th $5
+      %th $6
+      %th $7
+  %tbody
+    %tr
+      %td{scope: "row"} $8
+      %td $9
+      %td $10
+    = succeed "$END$" do
+      %tr
+        %td{scope: "row"} $11
+        %td $12
+        %td $13

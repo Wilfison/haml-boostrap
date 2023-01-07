@@ -1,0 +1,20 @@
+{
+  "name": "haml-boostrap",
+  "displayName": "HAML Boostrap 4,5 Snippets",
+  "description": "Bootstrap 4,5 Snippets for HAML",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "haml",
+        "path": "./snippets/boostrap4.code-snippets"
+      }
+    ]
+  }
+}

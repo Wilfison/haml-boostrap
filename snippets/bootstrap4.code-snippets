@@ -1,0 +1,1937 @@
+{
+  "bs4-alert-additional-content": {
+    "prefix": "bs4-alert-additional-content",
+    "body": [
+      ".alert.alert-success{role: \"alert\"}",
+      "  %h4.alert-heading $1",
+      "  %p $2",
+      "  %p.mb-0 $3"
+    ]
+  },
+  "bs4-alert-closable": {
+    "prefix": "bs4-alert-closable",
+    "body": [
+      ".alert.alert-warning.alert-dismissible.fade.show{role: \"alert\"}",
+      "  %button.close{\"aria-label\": \"Close\", \"data-dismiss\": \"alert\", type: \"button\"}",
+      "    %span{\"aria-hidden\": \"true\"} ×",
+      "  %strong $1",
+      "  $2",
+      ":javascript",
+      "  $(\".alert\").alert();"
+    ]
+  },
+  "bs4-alert": {
+    "prefix": "bs4-alert",
+    "body": [
+      ".alert.alert-${1|primary,secondary,success,danger,warning,info,light,dark|}{role: \"alert\"}",
+      "  %strong ${1:Check it out!}",
+      "  $2"
+    ]
+  },
+  "bs4-alert-dismissible": {
+    "prefix": "bs4-alert-dismissible",
+    "body": [
+      ".alert.alert-dismissible.fade.show{class: \"alert-${2:primary|secondary|success|info|warning|danger|light|dark}\", role: \"alert\"}",
+      "  %button.close{\"aria-label\": \"Close\", \"data-dismiss\": \"alert\", type: \"button\"}",
+      "    %span{\"aria-hidden\": \"true\"} ×",
+      "    %span.sr-only Close",
+      "  ${1:",
+      "  %strong Holy guacamole!",
+      "  You should check in on some of those fields below.}"
+    ]
+  },
+  "bs4-alert-link": {
+    "prefix": "bs4-alert-link",
+    "body": [
+      ".alert{class: \"alert-${1|primary,secondary,success,danger,warning,info,light,dark|}\", role: \"alert\"}",
+      "  %strong ${2:Warning!}",
+      "  = succeed \"$5\" do",
+      "    %a.alert-link{href: \"${4:#}\"} $3"
+    ]
+  },
+  "bs4-badge-button": {
+    "prefix": "bs4-badge-button",
+    "body": [
+      "%button.btn",
+      "  ${1:Notification}",
+      "  %span.badge{class: \"badge-${3|primary,secondary,success,danger,warning,info,light,dark|}\"} $2"
+    ]
+  },
+  "bs4-badge": {
+    "prefix": "bs4-badge",
+    "body": [
+      "%span.badge{class: \"badge-${1|primary,secondary,success,danger,warning,info,light,dark|}\"} $2"
+    ]
+  },
+  "bs4-badge-heading": {
+    "prefix": "bs4-badge-heading",
+    "body": [
+      "%h>",
+      "${1:1-6}&gt;${3:Example heading}",
+      "%span.badge{class: \"badge-${2|primary,secondary,success,danger,warning,info,light,dark|}\"} ${4:New}"
+    ]
+  },
+  "bs4-badge-link": {
+    "prefix": "bs4-badge-link",
+    "body": [
+      "%a.badge{class: \"badge-${3|primary,secondary,success,danger,warning,info,light,dark|}\", href: \"${2:#}\"} $1"
+    ]
+  },
+  "bs4-badge-pill": {
+    "prefix": "bs4-badge-pill",
+    "body": [
+      "%span.badge.badge-pill{class: \"badge-${1|primary,secondary,success,danger,warning,info,light,dark|}\"} $2"
+    ]
+  },
+  "bs4-bgroup": {
+    "prefix": "bs4-bgroup",
+    "body": [
+      ".btn-group{\"aria-label\": \"$2\", role: \"group\"}",
+      "  %button.btn{class: \"btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|\", type: \"button\"} $3",
+      "  %button.btn{class: \"btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|\", type: \"button\"} $4",
+      "  %button.btn{class: \"btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|\", type: \"button\"} $5"
+    ]
+  },
+  "bs4-bgroup-dropdown-vertical": {
+    "prefix": "bs4-bgroup-dropdown-vertical",
+    "body": [
+      ".btn-group-vertical{\"aria-label\": \"$1\", role: \"group\"}",
+      "  %button.btn.btn-secondary{type: \"button\"} $2",
+      "  %button.btn.btn-secondary{type: \"button\"} $3",
+      "  .btn-group{role: \"group\"}",
+      "    %button.btn.btn-secondary.dropdown-toggle{\"aria-expanded\": \"false\", \"aria-haspopup\": \"true\", \"data-toggle\": \"dropdown\", id: \"${5:dropdownId}\", type: \"button\"}",
+      "      $4",
+      "    .dropdown-menu{\"aria-labelledby\": \"${5:dropdownId}\"}",
+      "      %a.dropdown-item{href: \"${7:#}\"} $6",
+      "      %a.dropdown-item{href: \"${9:#}\"} $8"
+    ]
+  },
+  "bs4-bgroup-dropdown": {
+    "prefix": "bs4-bgroup-dropdown",
+    "body": [
+      ".btn-group{\"aria-label\": \"$1\", role: \"group\"}",
+      "  %button.btn.btn-secondary{type: \"button\"} $2",
+      "  %button.btn.btn-secondary{type: \"button\"} $3",
+      "  .btn-group{role: \"group\"}",
+      "    %button.btn.btn-secondary.dropdown-toggle{\"aria-expanded\": \"false\", \"aria-haspopup\": \"true\", \"data-toggle\": \"dropdown\", id: \"${5:dropdownId}\", type: \"button\"}",
+      "      $4",
+      "    .dropdown-menu{\"aria-labelledby\": \"${5:dropdownId}\"}",
+      "      %a.dropdown-item{href: \"${7:#}\"} $6",
+      "      %a.dropdown-item{href: \"${9:#}\"} $8"
+    ]
+  },
+  "bs4-bgroup-size": {
+    "prefix": "bs4-bgroup-size",
+    "body": [
+      ".btn-group{\"aria-label\": \"$2\", class: \"btn-group-${1:lg|sm|xs}\", role: \"group\"}",
+      "  ${3:Add buttons here}"
+    ]
+  },
+  "bs4-bgroup-toolbar": {
+    "prefix": "bs4-bgroup-toolbar",
+    "body": [
+      ".btn-toolbar{\"aria-label\": \"$1\", role: \"toolbar\"}",
+      "  .btn-group{\"aria-label\": \"$2\", role: \"group\"}",
+      "    %button.btn{class: \"btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|\", type: \"button\"} $4",
+      "    %button.btn{class: \"btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|\", type: \"button\"} $5",
+      "    %button.btn{class: \"btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|\", type: \"button\"} $6",
+      "  .btn-group{\"aria-label\": \"$7\", role: \"group\"}",
+      "    %button.btn{class: \"btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|\", type: \"button\"} $8",
+      "    %button.btn{class: \"btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|\", type: \"button\"} $9"
+    ]
+  },
+  "bs4-breadcrumb": {
+    "prefix": "bs4-breadcrumb",
+    "body": [
+      "%nav.breadcrumb",
+      "  %a.breadcrumb-item{href: \"${2:#}\"} $1",
+      "  %a.breadcrumb-item{href: \"${4:#}\"} $3",
+      "  %span.breadcrumb-item.active $5"
+    ]
+  },
+  "bs4-breadcrumb-list": {
+    "prefix": "bs4-breadcrumb-list",
+    "body": [
+      "%ol.breadcrumb",
+      "  %li.breadcrumb-item",
+      "    %a{href: \"${2:#}\"} $1",
+      "  %li.breadcrumb-item",
+      "    %a{href: \"${4:#}\"} $3",
+      "  %li.breadcrumb-item.active $5"
+    ]
+  },
+  "bs4-button-a": {
+    "prefix": "bs4-button-a",
+    "body": [
+      "%a.btn{class: \"btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|\", href: \"${2:#}\", id: \"$4\", name: \"$4\", role: \"button\"} $1"
+    ]
+  },
+  "bs4-button-block": {
+    "prefix": "bs4-button-block",
+    "body": [
+      "%button.btn{class: \"btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|\", id: \"$3\", name: \"$3\", type: \"button\"}>",
+      "btn-block\"&gt;$1"
+    ]
+  },
+  "bs4-button-checkbox": {
+    "prefix": "bs4-button-checkbox",
+    "body": [
+      ".btn-group{\"data-toggle\": \"buttons\"}",
+      "  %label.btn.active{class: \"btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|\"}",
+      "    %input{autocomplete: \"off\", checked: \"checked\", id: \"$3\", name: \"$3\", type: \"checkbox\"}>/",
+      "    $2",
+      "  %label.btn{class: \"btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|\"}",
+      "    %input{autocomplete: \"off\", id: \"$5\", name: \"$5\", type: \"checkbox\"}>/",
+      "    $4",
+      "  %label.btn{class: \"btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|\"}",
+      "    %input{autocomplete: \"off\", id: \"$7\", name: \"$7\", type: \"checkbox\"}>/",
+      "    $6"
+    ]
+  },
+  "bs4-button": {
+    "prefix": "bs4-button",
+    "body": [
+      "%button.btn{class: \"btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|\", type: \"button\"} $1"
+    ]
+  },
+  "bs4-button-disabled-a": {
+    "prefix": "bs4-button-disabled-a",
+    "body": [
+      "%a.btn{class: \"btn-${3|primary,secondary,success,danger,warning,info,light,dark,link| ${4:active|disabled}\", href: \"${2:#}\", role: \"button\"} $1"
+    ]
+  },
+  "bs4-button-input": {
+    "prefix": "bs4-button-input",
+    "body": [
+      "%input.btn{class: \"btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|\", id: \"$2\", name: \"$2\", type: \"button\", value: \"$1\"}/"
+    ]
+  },
+  "bs4-button-outline": {
+    "prefix": "bs4-button-outline",
+    "body": [
+      "%button.btn{class: \"btn-outline-${2|primary,secondary,success,danger,warning,info,light,dark,link|\", type: \"button\"} $1"
+    ]
+  },
+  "bs4-button-radio": {
+    "prefix": "bs4-button-radio",
+    "body": [
+      ".btn-group{\"data-toggle\": \"buttons\"}",
+      "  %label.btn.active{class: \"btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|\"}",
+      "    %input{autocomplete: \"off\", checked: \"checked\", id: \"$3\", name: \"$3\", type: \"radio\"}>/",
+      "    $2",
+      "  %label.btn{class: \"btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|\"}",
+      "    %input{autocomplete: \"off\", id: \"$5\", name: \"$5\", type: \"radio\"}>/",
+      "    $4",
+      "  %label.btn{class: \"btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|\"}",
+      "    %input{autocomplete: \"off \", id: \"$7 \", name: \"$7\", type: \" radio\"}>/",
+      "    $6"
+    ]
+  },
+  "bs4-button-sizes": {
+    "prefix": "bs4-button-sizes",
+    "body": [
+      "%button.btn{class: \"btn-${2|primary,secondary,success,danger,warning,info,light,dark,link| btn-${3:lg|sm}\", type: \"button\"} $1"
+    ]
+  },
+  "bs4-button-toggle": {
+    "prefix": "bs4-button-toggle",
+    "body": [
+      "%button.btn{\"aria-pressed\": \"false\", autocomplete: \"off\", class: \"btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|\", \"data-toggle\": \"button\", type: \"button\"} $1"
+    ]
+  },
+  "bs4-card-align": {
+    "prefix": "bs4-card-align",
+    "body": [
+      ".card{class: \"text-${3:left|center|right}\"}",
+      "  %img.card-img-top{alt: \"$2\", src: \"${1:holder.js/100px180/}\"}/",
+      "  .card-body",
+      "    %h4.card-title ${4:Title}",
+      "    %p.card-text ${5:Body}"
+    ]
+  },
+  "bs4-card-background-custom": {
+    "prefix": "bs4-card-background-custom",
+    "body": [
+      ".card{style: \"background-color:${1:cadetblue}; border-color:${2:darkblue};\"}",
+      "  %img.card-img-top{alt: \"$4\", src: \"${3:holder.js/100x180/}\"}/",
+      "  .card-body",
+      "    %h4.card-title ${5:Title}",
+      "    %p.card-text ${6:Text}"
+    ]
+  },
+  "bs4-card-background": {
+    "prefix": "bs4-card-background",
+    "body": [
+      ".card.text-white{class: \"bg-${1|primary,secondary,success,danger,warning,info,light,dark,link|\"}",
+      "  %img.card-img-top{alt: \"$3\", src: \"${2:holder.js/100px180/}\"}/",
+      "  .card-body",
+      "    %h4.card-title ${4:Title}",
+      "    %p.card-text ${5:Text}"
+    ]
+  },
+  "bs4-card-blockquote": {
+    "prefix": "bs4-card-blockquote",
+    "body": [
+      ".card",
+      "  .card-body",
+      "    %blockquote.blockquote",
+      "      %p ${1:Quote}",
+      "      %footer.card-blockquote",
+      "        ${2:Footer}",
+      "        %cite{title: \"${3:Source title}\"} ${3:Source title}"
+    ]
+  },
+  "bs4-card-border": {
+    "prefix": "bs4-card-border",
+    "body": [
+      ".card{class: \"border-${1|primary,secondary,success,danger,warning,info,light,dark,link|\"}",
+      "  %img.card-img-top{alt: \"$3\", src: \"${2:holder.js/100px180/}\"}/",
+      "  .card-body",
+      "    %h4.card-title ${4:Title}",
+      "    %p.card-text ${5:Text}"
+    ]
+  },
+  "bs4-card-columns": {
+    "prefix": "bs4-card-columns",
+    "body": [
+      ".card-columns",
+      "  .card",
+      "    %img.card-img-top{alt: \"$2\", src: \"${1:holder.js/100x180/}\"}/",
+      "    .card-body",
+      "      %h4.card-title ${3:Title}",
+      "      %p.card-text ${4:Text}",
+      "  .card",
+      "    %img.card-img-top{alt: \"$6\", src: \"${5:holder.js/100x180/}\"}/",
+      "    .card-body",
+      "      %h4.card-title ${7:Title}",
+      "      %p.card-text ${8:Text}"
+    ]
+  },
+  "bs4-card-decks": {
+    "prefix": "bs4-card-decks",
+    "body": [
+      ".card-deck",
+      "  .card",
+      "    %img.card-img-top{alt: \"$2\", src: \"${1:holder.js/100x180/}\"}/",
+      "    .card-body",
+      "      %h4.card-title ${3:Title}",
+      "      %p.card-text ${4:Text}",
+      "  .card",
+      "    %img.card-img-top{alt: \"$6\", src: \"${5:holder.js/100x180/}\"}/",
+      "    .card-body",
+      "      %h4.card-title ${7:Title}",
+      "      %p.card-text ${8:Text}"
+    ]
+  },
+  "bs4-card": {
+    "prefix": "bs4-card",
+    "body": [
+      ".card",
+      "  %img.card-img-top{alt: \"$2\", src: \"${1:holder.js/100x180/}\"}/",
+      "  .card-body",
+      "    %h4.card-title ${3:Title}",
+      "    %p.card-text ${4:Text}"
+    ]
+  },
+  "bs4-card-grid": {
+    "prefix": "bs4-card-grid",
+    "body": [
+      ".row",
+      "  %div{class: \"col-${1:xs|sm|md|lg|xl}-${2:1-12}\"}",
+      "    .card",
+      "      .card-body",
+      "        %h3.card-title ${3:Title}",
+      "        %p.card-text ${4:Text}",
+      "  %div{class: \"col-${5:xs|sm|md|lg|xl}-${6:1-12}\"}",
+      "    .card",
+      "      .card-body",
+      "        %h3.card-title ${7:Title}",
+      "        %p.card-text ${8:Text}"
+    ]
+  },
+  "bs4-card-groups": {
+    "prefix": "bs4-card-groups",
+    "body": [
+      ".card-group",
+      "  .card",
+      "    %img.card-img-top{alt: \"${2:Card image cap}\", \"data-src\": \"${1:holder.js/100x180/}\"}/",
+      "    .card-body",
+      "      %h4.card-title ${3:Title}",
+      "      %p.card-text ${4:Text}",
+      "  .card",
+      "    %img.card-img-top{alt: \"${6:Card image cap}\", \"data-src\": \"${5:holder.js/100x180/}\"}/",
+      "    .card-body",
+      "      %h4.card-title ${7:Title}",
+      "      %p.card-text ${8:Text}"
+    ]
+  },
+  "bs4-card-head-foot": {
+    "prefix": "bs4-card-head-foot",
+    "body": [
+      ".card",
+      "  .card-header",
+      "    ${1:Header}",
+      "  .card-body",
+      "    %h4.card-title ${2:Title}",
+      "    %p.card-text ${3:Text}",
+      "  .card-footer.text-muted",
+      "    ${4:Footer}"
+    ]
+  },
+  "bs4-card-links": {
+    "prefix": "bs4-card-links",
+    "body": [
+      ".card",
+      "  %img.card-img-top{alt: \"${2:Card image cap}\", \"data-src\": \"${1:holder.js/100x180/?text=Image cap}\"}/",
+      "  .card-body",
+      "    %h4.card-title ${3:Title}",
+      "    %p.card-text ${4:Text}",
+      "  .card-body",
+      "    %a.card-link{href: \"${6:#}\"} ${5:Card link}",
+      "    %a.card-link{href: \"${8:#}\"} ${7:Another link}"
+    ]
+  },
+  "bs4-card-list": {
+    "prefix": "bs4-card-list",
+    "body": [
+      ".card",
+      "  %img.card-img-top{alt: \"${2:Card image cap}\", \"data-src\": \"${1:holder.js/100x180/?text=Image cap}\"}/",
+      "  .card-body",
+      "    %h4.card-title ${3:Title}",
+      "    %p.card-text ${4:Text}",
+      "  %ul.list-group.list-group-flush",
+      "    %li.list-group-item ${5:Item 1}",
+      "    %li.list-group-item ${6:Item 2}",
+      "    %li.list-group-item ${7:Item 3}"
+    ]
+  },
+  "bs4-card-overlay": {
+    "prefix": "bs4-card-overlay",
+    "body": [
+      ".card.bg-dark.text-white",
+      "  %img.card-img{alt: \"$2\", src: \"${1:holder.js/100x180/}\"}/",
+      "  .card-img-overlay",
+      "    %h4.card-title ${3:Title}",
+      "    %p.card-text ${4:Text}"
+    ]
+  },
+  "bs4-card-pill-head": {
+    "prefix": "bs4-card-pill-head",
+    "body": [
+      ".card.text-center",
+      "  .card-header",
+      "    %ul.nav.nav-pills.card-header-pills",
+      "      %li.nav-item",
+      "        %a.nav-link.active{href: \"${2:#}\"} ${1:Active pill}",
+      "      %li.nav-item",
+      "        %a.nav-link{href: \"${4:#}\"} ${3:Pill}",
+      "      %li.nav-item",
+      "        %a.nav-link.disabled{href: \"${6:#}\"} ${5:Disabled pill}",
+      "  .card-body",
+      "    %h4.card-title ${7:Title}",
+      "    %p.card-text ${8:Body}"
+    ]
+  },
+  "bs4-card-subtitle": {
+    "prefix": "bs4-card-subtitle",
+    "body": [
+      ".card",
+      "  .card-body",
+      "    %h4.card-title ${1:Title}",
+      "    %h6.card-subtitle.text-muted ${2:Subtitle}",
+      "  %img{alt: \"$4\", src: \"${3:holder.js/100x180/}\"}/",
+      "  .card-body",
+      "    %p.card-text ${5:Text}",
+      "    %a.card-link{href: \"${7:#}\"} ${6:Link 1}",
+      "    %a.card-link{href: \"${9:#}\"} ${8:Link 2}"
+    ]
+  },
+  "bs4-card-tab-head": {
+    "prefix": "bs4-card-tab-head",
+    "body": [
+      ".card.text-center",
+      "  .card-header",
+      "    %ul.nav.nav-tabs.card-header-tabs",
+      "      %li.nav-item",
+      "        %a.nav-link.active{href: \"${2:#}\"} ${1:Active tab}",
+      "      %li.nav-item",
+      "        %a.nav-link{href: \"${4:#}\"} ${3:Tab}",
+      "      %li.nav-item",
+      "        %a.nav-link.disabled{href: \"${6:#}\"} ${5:Disabled tab}",
+      "  .card-body",
+      "    %h4.card-title ${7:Title}",
+      "    %p.card-text ${8:Body}"
+    ]
+  },
+  "bs4-carousel-caption": {
+    "prefix": "bs4-carousel-caption",
+    "body": [
+      ".carousel.slide{\"data-ride\": \"carousel\", id: \"${1:carouselId}\"}",
+      "  %ol.carousel-indicators",
+      "    %li.active{\"data-slide-to\": \"0\", \"data-target\": \"\\#${1:carouselId}\"}",
+      "    %li{\"data-slide-to\": \"1\", \"data-target\": \"\\#${1:carouselId}\"}",
+      "    %li{\"data-slide-to\": \"2\", \"data-target\": \"\\#${1:carouselId}\"}",
+      "  .carousel-inner{role: \"listbox\"}",
+      "    .carousel-item.active",
+      "      %img{alt: \"${3:First slide}\", \"data-src\": \"${2:holder.js/900x500/auto/#777:#555/text:First slide}\"}/",
+      "      .carousel-caption.d-none.d-md-block",
+      "        %h3 ${4:Title}",
+      "        %p ${5:Description}",
+      "    .carousel-item",
+      "      %img{alt: \"${7:Second slide}\", \"data-src\": \"${6:holder.js/900x500/auto/#666:#444/text:Second slide}\"}/",
+      "      .carousel-caption.d-none.d-md-block",
+      "        %h3 ${8:Title}",
+      "        %p ${9:Description}",
+      "    .carousel-item",
+      "      %img{alt: \"${11:Third slide}\", \"data-src\": \"${10:holder.js/900x500/auto/#666:#444/text:Third slide}\"}/",
+      "      .carousel-caption.d-none.d-md-block",
+      "        %h3 ${12:Title}",
+      "        %p ${13:Description}",
+      "  %a.carousel-control-prev{\"data-slide\": \"prev\", href: \"\\#${1:carouselId}\", role: \"button\"}",
+      "    %span.carousel-control-prev-icon{\"aria-hidden\": \"true\"}",
+      "    %span.sr-only Previous",
+      "  %a.carousel-control-next{\"data-slide\": \"next\", href: \"\\#${1:carouselId}\", role: \"button\"}",
+      "    %span.carousel-control-next-icon{\"aria-hidden\": \"true\"}",
+      "    %span.sr-only Next"
+    ]
+  },
+  "bs4-carousel": {
+    "prefix": "bs4-carousel",
+    "body": [
+      ".carousel.slide{\"data-ride\": \"carousel\", id: \"${1:carouselId}\"}",
+      "  %ol.carousel-indicators",
+      "    %li.active{\"data-slide-to\": \"0\", \"data-target\": \"\\#${1:carouselId}\"}",
+      "    %li{\"data-slide-to\": \"1\", \"data-target\": \"\\#${1:carouselId}\"}",
+      "    %li{\"data-slide-to\": \"2\", \"data-target\": \"\\#${1:carouselId}\"}",
+      "  .carousel-inner{role: \"listbox\"}",
+      "    .carousel-item.active",
+      "      %img{alt: \"${3:First slide}\", \"data-src\": \"${2:holder.js/900x500/auto/#777:#555/text:First slide}\"}/",
+      "    .carousel-item",
+      "      %img{alt: \"${5:Second slide}\", \"data-src\": \"${4:holder.js/900x500/auto/#666:#444/text:Second slide}\"}/",
+      "    .carousel-item",
+      "      %img{alt: \"${7:Third slide}\", \"data-src\": \"${6:holder.js/900x500/auto/#666:#444/text:Third slide}\"}/",
+      "  %a.carousel-control-prev{\"data-slide\": \"prev\", href: \"\\#${1:carouselId}\", role: \"button\"}",
+      "    %span.carousel-control-prev-icon{\"aria-hidden\": \"true\"}",
+      "    %span.sr-only Previous",
+      "  %a.carousel-control-next{\"data-slide\": \"next\", href: \"\\#${1:carouselId}\", role: \"button\"}",
+      "    %span.carousel-control-next-icon{\"aria-hidden\": \"true\"}",
+      "    %span.sr-only Next"
+    ]
+  },
+  "bs4-collapse-accordion": {
+    "prefix": "bs4-collapse-accordion",
+    "body": [
+      "%div{\"aria-multiselectable\": \"true\", id: \"${1:accordianId}\", role: \"tablist\"}",
+      "  .card",
+      "    .card-header{id: \"${3:section1HeaderId}\", role: \"tab\"}",
+      "      %h5.mb-0",
+      "        %a{\"aria-controls\": \"${5:section1ContentId}\", \"aria-expanded\": \"true\", \"data-parent\": \"\\#${1:accordianId}\", \"data-toggle\": \"collapse\", href: \"\\#${5:section1ContentId}\"}",
+      "          ${2:Section 1}",
+      "    .collapse.in{\"aria-labelledby\": \"${3:section1HeaderId}\", id: \"${5:section1ContentId}\", role: \"tabpanel\"}",
+      "      .card-body",
+      "        ${4:Section 1 content}",
+      "  .card",
+      "    .card-header{id: \"${7:section2HeaderId}\", role: \"tab\"}",
+      "      %h5.mb-0",
+      "        %a{\"aria-controls\": \"${9:section2ContentId}\", \"aria-expanded\": \"true\", \"data-parent\": \"\\#${1:accordianId}\", \"data-toggle\": \"collapse\", href: \"\\#${9:section2ContentId}\"}",
+      "          ${6:Section 2}",
+      "    .collapse.in{\"aria-labelledby\": \"${7:section2HeaderId}\", id: \"${9:section2ContentId}\", role: \"tabpanel\"}",
+      "      .card-body",
+      "        ${8:Section 2 content}"
+    ]
+  },
+  "bs4-collapse-button": {
+    "prefix": "bs4-collapse-button",
+    "body": [
+      "%p",
+      "  %button.btn.btn-primary{\"aria-controls\": \"${2:contentId}\", \"aria-expanded\": \"false\", \"data-target\": \"\\#${2:contentId}\", \"data-toggle\": \"collapse\", type: \"button\"}",
+      "    ${1:Show}",
+      ".collapse{id: \"${2:contentId}\"}",
+      "  $3"
+    ]
+  },
+  "bs4-collapse": {
+    "prefix": "bs4-collapse",
+    "body": [
+      "%p",
+      "  %a.btn.btn-primary{\"aria-controls\": \"${2:contentId}\", \"aria-expanded\": \"false\", \"data-toggle\": \"collapse\", href: \"\\#${2:contentId}\"}",
+      "    ${1:Show}",
+      ".collapse{id: \"${2:contentId}\"}",
+      "  $3"
+    ]
+  },
+  "bs4-figure": {
+    "prefix": "bs4-figure",
+    "body": [
+      "%figure.figure",
+      "  %img.figure-img.img-fluid.rounded{alt: \"$2\", src: \"$1\"}/",
+      "  %figcaption.figure-caption{class: \"${4:text-xs-right}\"} $3"
+    ]
+  },
+  "bs4-image": {
+    "prefix": "bs4-image",
+    "body": [
+      "%img{alt: \"$4\", class: \"img-${2:fluid|thumbnail} ${3:rounded-top|rounded-right|rounded-bottom|rounded-left|rounded-circle|}\", src: \"$1\"}/"
+    ]
+  },
+  "bs4-table": {
+    "prefix": "bs4-table",
+    "body": [
+      "%table.table",
+      "  %thead",
+      "    %tr",
+      "      %th $1",
+      "      %th $2",
+      "      %th $3",
+      "  %tbody",
+      "    %tr",
+      "      %td{scope: \"row\"} $4",
+      "      %td $5",
+      "      %td $6",
+      "    = succeed \"$END$\" do",
+      "      %tr",
+      "        %td{scope: \"row\"} $7",
+      "        %td $8",
+      "        %td $9"
+    ]
+  },
+  "bs4-table-special": {
+    "prefix": "bs4-table-special",
+    "body": [
+      "%table.table{class: \"table-${1:striped|sm|bordered|hover|inverse} ${2:table-inverse} ${3:table-responsive}\"}",
+      "  %thead{class: \"${4:thead-inverse|thead-default}\"}",
+      "    %tr",
+      "      %th $5",
+      "      %th $6",
+      "      %th $7",
+      "  %tbody",
+      "    %tr",
+      "      %td{scope: \"row\"} $8",
+      "      %td $9",
+      "      %td $10",
+      "    = succeed \"$END$\" do",
+      "      %tr",
+      "        %td{scope: \"row\"} $11",
+      "        %td $12",
+      "        %td $13"
+    ]
+  },
+  "bs4-typography-blockquote-reverse": {
+    "prefix": "bs4-typography-blockquote-reverse",
+    "body": [
+      "%blockquote.blockquote.text-right",
+      "  %p.mb-0 $1",
+      "  %footer.blockquote-footer",
+      "    $2",
+      "    %cite{title: \"${3:Source Title}\"} ${3:Source Title}"
+    ]
+  },
+  "bs4-typography-blockquote": {
+    "prefix": "bs4-typography-blockquote",
+    "body": [
+      "%blockquote.blockquote",
+      "  %p.mb-0 $1",
+      "  %footer.blockquote-footer",
+      "    $2",
+      "    %cite{title: \"${3:Source Title}\"} ${3:Source Title}"
+    ]
+  },
+  "bs4-typography-description-list": {
+    "prefix": "bs4-typography-description-list",
+    "body": [
+      "%dl.row",
+      "  %dt.col-sm-3 $1",
+      "  %dd.col-sm-9 $2",
+      "  %dt.col-sm-3 $3",
+      "  %dd.col-sm-9 $4",
+      "  %dd.col-sm-9.offset-sm-3 $5",
+      "  %dt.col-sm-3.text-truncate $6",
+      "  %dd.col-sm-9 $7",
+      "  %dt.col-sm-3",
+      "  %dd.col-sm-9",
+      "    %dl.row",
+      "      %dt.col-sm-4 ${8:Nested title}",
+      "      %dd.col-sm-8 ${9:Nested definition}"
+    ]
+  },
+  "bs4-typography-display-heading": {
+    "prefix": "bs4-typography-display-heading",
+    "body": [
+      "%h1{class: \"display-${1:1|2|3|4}\"} $2"
+    ]
+  },
+  "bs4-typography-lead": {
+    "prefix": "bs4-typography-lead",
+    "body": [
+      "%p.lead",
+      "  $2"
+    ]
+  },
+  "bs4-typography-list-inline": {
+    "prefix": "bs4-typography-list-inline",
+    "body": [
+      "%ul.list-inline",
+      "  %li.list-inline-item $1",
+      "  %li.list-inline-item $2",
+      "  %li.list-inline-item $3"
+    ]
+  },
+  "bs4-typography-list-unstyled": {
+    "prefix": "bs4-typography-list-unstyled",
+    "body": [
+      "%ul.list-unstyled",
+      "  %li $1",
+      "  %li $2",
+      "  %li $3"
+    ]
+  },
+  "bs4-typography-muted-text": {
+    "prefix": "bs4-typography-muted-text",
+    "body": [
+      "%small.text-muted $1"
+    ]
+  },
+  "bs4-dropdown-alignment": {
+    "prefix": "bs4-dropdown-alignment",
+    "body": [
+      ".btn-group",
+      "  %button.btn.btn-secondary.dropdown-toggle{\"aria-expanded\": \"false\", \"aria-haspopup\": \"true\", \"data-toggle\": \"dropdown\", id: \"${2:triggerId}\", type: \"button\"}",
+      "    ${1:This dropdown's menu is right-aligned}",
+      "  .dropdown-menu.dropdown-menu-right{\"aria-labelledby\": \"${2:triggerId}\"}",
+      "    %a.dropdown-item{href: \"${4:#}\"} ${3:Action}",
+      "    %a.dropdown-item.disabled{href: \"${6:#}\"} ${5:Disabled action}",
+      "    %h6.dropdown-header ${7:Section header}",
+      "    %a.dropdown-item{href: \"${9:#}\"} ${8:Action}",
+      "    .dropdown-divider",
+      "    %a.dropdown-item{href: \"${11:#}\"} ${10:After divider action}"
+    ]
+  },
+  "bs4-dropdown-anchor": {
+    "prefix": "bs4-dropdown-anchor",
+    "body": [
+      ".dropdown.open",
+      "  %a.btn.btn-secondary.dropdown-toggle{\"aria-expanded\": \"false\", \"aria-haspopup\": \"true\", \"data-toggle\": \"dropdown\", id: \"${2:triggerId}\", type: \"button\"}",
+      "    ${1:Dropdown}",
+      "    .dropdown-menu{\"aria-labelledby\": \"${2:triggerId}\"}",
+      "      %a.dropdown-item{href: \"${4:#}\"} ${3:Action}",
+      "      %a.dropdown-item.disabled{href: \"${6:#}\"} ${5:Disabled action}"
+    ]
+  },
+  "bs4-dropdown-button": {
+    "prefix": "bs4-dropdown-button",
+    "body": [
+      ".dropdown.open",
+      "  %button.btn.btn-secondary.dropdown-toggle{\"aria-expanded\": \"false\", \"aria-haspopup\": \"true\", \"data-toggle\": \"dropdown\", id: \"${2:triggerId}\", type: \"button\"}",
+      "    ${1:Dropdown}",
+      "  .dropdown-menu{\"aria-labelledby\": \"${2:triggerId}\"}",
+      "    %button.dropdown-item{href: \"${4:#}\"} ${3:Action}",
+      "    %button.dropdown-item.disabled{href: \"${6:#}\"} ${5:Disabled action}"
+    ]
+  },
+  "bs4-dropdown-colored": {
+    "prefix": "bs4-dropdown-colored",
+    "body": [
+      ".dropdown.open",
+      "  %button.btn.dropdown-toggle{\"aria-expanded\": \"false\", \"aria-haspopup\": \"true\", class: \"btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|\", \"data-toggle\": \"dropdown\", id: \"${3:triggerId}\", type: \"button\"}",
+      "    ${1:Dropdown}",
+      "  .dropdown-menu{\"aria-labelledby\": \"${3:triggerId}\"}",
+      "    %a.dropdown-item{href: \"${5:#}\"} ${4:Action}",
+      "    %a.dropdown-item.disabled{href: \"${7:#}\"} ${6:Disabled action}"
+    ]
+  },
+  "bs4-dropdown": {
+    "prefix": "bs4-dropdown",
+    "body": [
+      ".dropdown",
+      "  %button.btn.btn-secondary.dropdown-toggle{\"aria-expanded\": \"false\", \"aria-haspopup\": \"true\", \"data-toggle\": \"dropdown\", id: \"${2:triggerId}\", type: \"button\"}",
+      "    ${1:Dropdown}",
+      "  .dropdown-menu{\"aria-labelledby\": \"${2:triggerId}\"}",
+      "    %a.dropdown-item{href: \"${4:#}\"} ${3:Action}",
+      "    %a.dropdown-item.disabled{href: \"${6:#}\"} ${5:Disabled action}",
+      "    %h6.dropdown-header ${7:Section header}",
+      "    %a.dropdown-item{href: \"${9:#}\"} ${8:Action}",
+      "    .dropdown-divider",
+      "    %a.dropdown-item{href: \"${11:#}\"} ${10:After divider action}"
+    ]
+  },
+  "bs4-dropdown-sized": {
+    "prefix": "bs4-dropdown-sized",
+    "body": [
+      ".dropdown.open",
+      "  %button.btn.btn-secondary.dropdown-toggle{\"aria-expanded\": \"false\", \"aria-haspopup\": \"true\", class: \"btn-${2:sm|lg}\", \"data-toggle\": \"dropdown\", id: \"${3:triggerId}\", type: \"button\"}",
+      "    ${1:Dropdown}",
+      "  .dropdown-menu{\"aria-labelledby\": \"${3:triggerId}\"}",
+      "    %a.dropdown-item{href: \"${5:#}\"} ${4:Action}",
+      "    %a.dropdown-item.disabled{href: \"${7:#}\"} ${6:Disabled action}",
+      "    %h6.dropdown-header ${8:Section header}",
+      "    %a.dropdown-item{href: \"${10:#}\"} ${9:Action}",
+      "    .dropdown-divider",
+      "    %a.dropdown-item{href: \"${12:#}\"} ${11:Ater divider action}"
+    ]
+  },
+  "bs4-dropdown-split": {
+    "prefix": "bs4-dropdown-split",
+    "body": [
+      ".btn-group",
+      "  %button.btn.btn-secondary{type: \"button\"} ${1:Split dropdown}",
+      "  %button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split{\"aria-expanded\": \"false\", \"aria-haspopup\": \"true\", \"data-toggle\": \"dropdown\", type: \"button\"}",
+      "    %span.sr-only Toggle Dropdown",
+      "  .dropdown-menu",
+      "    %a.dropdown-item{href: \"${3:#}\"} ${2:Action}",
+      "    %a.dropdown-item.disabled{href: \"${5:#}\"} ${4:Disabled action}",
+      "    .dropdown-divider",
+      "    %a.dropdown-item{href: \"${7:#}\"} ${6:Separated link}"
+    ]
+  },
+  "bs4-dropdown-up-split": {
+    "prefix": "bs4-dropdown-up-split",
+    "body": [
+      ".btn-group.dropup",
+      "  %button.btn.btn-secondary{type: \"button\"} ${1:Split dropup}",
+      "  %button.btn.btn-secondary.dropdown-toggle{\"aria-expanded\": \"false\", \"aria-haspopup\": \"true\", \"data-toggle\": \"dropdown\", type: \"button\"}",
+      "    %span.sr-only Toggle Dropdown",
+      "  .dropdown-menu",
+      "    %a.dropdown-item{href: \"${3:#}\"} ${2:Action}",
+      "    %a.dropdown-item.disabled{href: \"${5:#}\"} ${4:Disabled action}",
+      "    %h6.dropdown-header ${6:Section header}",
+      "    %a.dropdown-item{href: \"${8:#}\"} ${7:Action}",
+      "    .dropdown-divider",
+      "    %a.dropdown-item{href: \"${10:#}\"} ${9:After divider action}"
+    ]
+  },
+  "bs4-dropdown-up": {
+    "prefix": "bs4-dropdown-up",
+    "body": [
+      ".dropup",
+      "  %button.btn.btn-secondary.dropdown-toggle{\"aria-expanded\": \"false\", \"aria-haspopup\": \"true\", \"data-toggle\": \"dropdown\", id: \"${2:triggerId}\", type: \"button\"}",
+      "    ${1:Dropdown}",
+      "  .dropdown-menu{\"aria-labelledby\": \"${2:triggerId}\"}",
+      "    %a.dropdown-item{href: \"${4:#}\"} ${3:Action}",
+      "    %a.dropdown-item.disabled{href: \"${6:#}\"} ${5:Disabled action}",
+      "    %h6.dropdown-header ${7:Section header}",
+      "    %a.dropdown-item{href: \"${9:#}\"} ${8:Action}",
+      "    .dropdown-divider",
+      "    %a.dropdown-item{href: \"${11:#}\"} ${10:After divider action}"
+    ]
+  },
+  "bs4-form-checkbox-custom": {
+    "prefix": "bs4-form-checkbox-custom",
+    "body": [
+      "%label.custom-control.custom-checkbox",
+      "  %input.custom-control-input{id: \"$1\", name: \"$1\", type: \"checkbox\", value: \"${2:checkedValue}\"}/",
+      "  %span.custom-control-indicator",
+      "  %span.custom-control-description $3"
+    ]
+  },
+  "bs4-form-checkbox-inline": {
+    "prefix": "bs4-form-checkbox-inline",
+    "body": [
+      ".form-check.form-check-inline",
+      "  %label.form-check-label",
+      "    %input.form-check-input{id: \"$2\", name: \"$2\", type: \"checkbox\", value: \"${3:checkedValue}\"}/",
+      "    ${1:Display value}"
+    ]
+  },
+  "bs4-form-checkbox-nolabel": {
+    "prefix": "bs4-form-checkbox-nolabel",
+    "body": [
+      ".form-check",
+      "  %label.form-check-label",
+      "    %input.form-check-input{\"aria-label\": \"${3:Text for screen reader}\", id: \"$2\", name: \"$2\", type: \"checkbox\", value: \"${1:checkedValue}\"}/"
+    ]
+  },
+  "bs4-form-checkbox": {
+    "prefix": "bs4-form-checkbox",
+    "body": [
+      ".form-check",
+      "  %label.form-check-label",
+      "    %input.form-check-input{id: \"$2\", name: \"$2\", type: \"checkbox\", value: \"${3:checkedValue}\"}>/",
+      "    ${4:checked}&gt;",
+      "    ${1:Display value}"
+    ]
+  },
+  "bs4-form-email": {
+    "prefix": "bs4-form-email",
+    "body": [
+      ".form-group",
+      "  %label{for: \"$3\"} $1",
+      "  %input.form-control{\"aria-describedby\": \"${4:emailHelpId}\", id: \"$3\", name: \"$3\", placeholder: \"$2\", type: \"email\"}/",
+      "  %small.form-text.text-muted{id: \"${4:emailHelpId}\"} ${5:Help text}"
+    ]
+  },
+  "bs4-form-file-custom": {
+    "prefix": "bs4-form-file-custom",
+    "body": [
+      ".form-group",
+      "  %label.custom-file",
+      "    %input.custom-file-input{\"aria-describedby\": \"${3:fileHelpId}\", id: \"$2\", name: \"$2\", placeholder: \"$1\", type: \"file\"}/",
+      "    %span.custom-file-control",
+      "  %small.form-text.text-muted{id: \"${3:fileHelpId}\"} ${4:Help text}"
+    ]
+  },
+  "bs4-form-file": {
+    "prefix": "bs4-form-file",
+    "body": [
+      ".form-group",
+      "  %label{for: \"$3\"} $1",
+      "  %input.form-control-file{\"aria-describedby\": \"${4:fileHelpId}\", id: \"$3\", name: \"$3\", placeholder: \"$2\", type: \"file\"}/",
+      "  %small.form-text.text-muted{id: \"${4:fileHelpId}\"} ${5:Help text}"
+    ]
+  },
+  "bs4-form-grid": {
+    "prefix": "bs4-form-grid",
+    "body": [
+      ".container",
+      "  %form",
+      "    .form-group.row",
+      "      %label.col-form-label{class: \"col-sm-${2:1-12}\", for: \"${6:inputName}\"} $1",
+      "      %div{class: \"col-sm-${3:1-12}\"}",
+      "        %input.form-control{id: \"${6:inputName}\", name: \"${6:inputName}\", placeholder: \"$4\", type: \"${5:text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week}\"}/",
+      "    %fieldset.form-group.row",
+      "      %legend.col-form-legend{class: \"col-sm-${8:1-12}\"} ${7:Group name}",
+      "      %div{class: \"col-sm-${10:1-12}\"}",
+      "        $9",
+      "    .form-group.row",
+      "      %div{class: \"${11:offset-sm-2 col-sm-10}\"}",
+      "        %button.btn.btn-primary{type: \"${13:submit}\"} ${12:Action}"
+    ]
+  },
+  "bs4-form-group-text": {
+    "prefix": "bs4-form-group-text",
+    "body": [
+      ".form-group",
+      "  %label{for: \"$3\"} $1",
+      "  %input.form-control{\"aria-describedby\": \"${4:helpId}\", id: \"$3\", name: \"$3\", placeholder: \"$2\", type: \"text\"}/",
+      "  %small.text-muted{id: \"${4:helpId}\"} ${5:Help text}"
+    ]
+  },
+  "bs4-form-group": {
+    "prefix": "bs4-form-group",
+    "body": [
+      ".form-group",
+      "  %label{for: \"$4\"} $1",
+      "  %input.form-control{\"aria-describedby\": \"${5:helpId}\", id: \"$4\", name: \"$4\", placeholder: \"$2\", type: \"${3:text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week}\"}/",
+      "  %small.text-muted{id: \"${5:helpId}\"} ${6:Help text}"
+    ]
+  },
+  "bs4-form-help-text-inline": {
+    "prefix": "bs4-form-help-text-inline",
+    "body": [
+      "%small.text-muted $1"
+    ]
+  },
+  "bs4-form-help-text": {
+    "prefix": "bs4-form-help-text",
+    "body": [
+      "%p.form-text.text-muted",
+      "  $1"
+    ]
+  },
+  "bs4-form-hidden": {
+    "prefix": "bs4-form-hidden",
+    "body": [
+      ".form-group",
+      "  %label.sr-only{for: \"${4:inputName}\"} ${1:Hidden input label}",
+      "  %input.form-control{id: \"${4:inputName}\", name: \"${4:inputName}\", placeholder: \"$2\", type: \"${3:text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week}\"}/"
+    ]
+  },
+  "bs4-form-inline": {
+    "prefix": "bs4-form-inline",
+    "body": [
+      "%form.form-inline",
+      "  .form-group",
+      "    %label{for: \"$4\"} $1",
+      "    %input.form-control{\"aria-describedby\": \"${5:helpId}\", id: \"$4\", name: \"$4\", placeholder: \"$2\", type: \"${3:text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week}\"}/",
+      "    %small.text-muted{id: \"${5:helpId}\"} ${6:Help text}"
+    ]
+  },
+  "bs4-form-input-sizing": {
+    "prefix": "bs4-form-input-sizing",
+    "body": [
+      ".form-group",
+      "  %label{for: \"$5\"} $1",
+      "  %input.form-control{\"aria-describedby\": \"${6:helpId}\", class: \"form-control-${4:sm|lg}\", id: \"$5\", name: \"$5\", placeholder: \"$2\", type: \"${3:text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week}\"}/",
+      "  %small.form-text.text-muted{id: \"${6:helpId}\"} ${7:Help text}"
+    ]
+  },
+  "bs4-form-input-text": {
+    "prefix": "bs4-form-input-text",
+    "body": [
+      ".form-group",
+      "  %label{for: \"$3\"} $1",
+      "  %input.form-control{\"aria-describedby\": \"${4:helpId}\", id: \"$3\", name: \"$3\", placeholder: \"$2\", type: \"text\"}/",
+      "  %small.form-text.text-muted{id: \"${4:helpId}\"} ${5:Help text}"
+    ]
+  },
+  "bs4-form-input": {
+    "prefix": "bs4-form-input",
+    "body": [
+      ".form-group",
+      "  %label{for: \"$4\"} $1",
+      "  %input.form-control{\"aria-describedby\": \"${5:helpId}\", id: \"$4\", name: \"$4\", placeholder: \"$2\", type: \"${3:text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week}\"}/",
+      "  %small.form-text.text-muted{id: \"${5:helpId}\"} ${6:Help text}"
+    ]
+  },
+  "bs4-form-multi-select-custom": {
+    "prefix": "bs4-form-multi-select-custom",
+    "body": [
+      ".form-group",
+      "  %label{for: \"$2\"} $1",
+      "  %select.custom-select{id: \"$2\", multiple: \"multiple\", name: \"$2\"}",
+      "    %option{selected: \"selected\"} ${3:Select one}",
+      "    %option{value: \"$4\"} $5",
+      "    %option{value: \"$6\"} $7",
+      "    %option{value: \"$8\"} $9"
+    ]
+  },
+  "bs4-form-multi-select": {
+    "prefix": "bs4-form-multi-select",
+    "body": [
+      ".form-group",
+      "  %label{for: \"$2\"} $1",
+      "  %select.form-control{id: \"$2\", multiple: \"multiple\", name: \"$2\"}",
+      "    %option $3",
+      "    %option $4",
+      "    %option $5"
+    ]
+  },
+  "bs4-form-multil-select-sizing": {
+    "prefix": "bs4-form-multil-select-sizing",
+    "body": [
+      ".form-group",
+      "  %label{for: \"$2\"} $1",
+      "  %select.form-control{class: \"form-control-${3:sm|lg}\", id: \"$2\", multiple: \"multiple\", name: \"$2\"}",
+      "    %option $4",
+      "    %option $5",
+      "    %option $6"
+    ]
+  },
+  "bs4-form-password": {
+    "prefix": "bs4-form-password",
+    "body": [
+      ".form-group",
+      "  %label{for: \"$3\"} $1",
+      "  %input.form-control{id: \"$3\", name: \"$3\", placeholder: \"$2\", type: \"password\"}/"
+    ]
+  },
+  "bs4-form-radio-custom": {
+    "prefix": "bs4-form-radio-custom",
+    "body": [
+      "%label.custom-control.custom-radio",
+      "  %input.custom-control-input{id: \"$1\", name: \"$1\", type: \"radio\", value: \"${2:checkedValue}\"}/",
+      "  %span.custom-control-indicator",
+      "  %span.custom-control-description $3"
+    ]
+  },
+  "bs4-form-radio-inline": {
+    "prefix": "bs4-form-radio-inline",
+    "body": [
+      ".form-check.form-check-inline",
+      "  %label.form-check-label",
+      "    %input.form-check-input{id: \"$2\", name: \"$2\", type: \"radio\", value: \"${3:checkedValue}\"}/",
+      "    ${1:Display value}"
+    ]
+  },
+  "bs4-form-radio-nolabel": {
+    "prefix": "bs4-form-radio-nolabel",
+    "body": [
+      ".form-check",
+      "  %label.form-check-label",
+      "    %input.form-check-input{\"aria-label\": \"${3:Text for screen reader}\", id: \"$2\", name: \"$2\", type: \"radio\", value: \"${1:checkedValue}\"}/"
+    ]
+  },
+  "bs4-form-radio": {
+    "prefix": "bs4-form-radio",
+    "body": [
+      ".form-check",
+      "  %label.form-check-label",
+      "    %input.form-check-input{id: \"$2\", name: \"$2\", type: \"radio\", value: \"${3:checkedValue}\"}>/",
+      "    ${4:checked}&gt;",
+      "    ${1:Display value}"
+    ]
+  },
+  "bs4-form-reset": {
+    "prefix": "bs4-form-reset",
+    "body": [
+      "%button.btn{class: \"btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|\", type: \"reset\"} ${1:Reset}"
+    ]
+  },
+  "bs4-form-select-custom": {
+    "prefix": "bs4-form-select-custom",
+    "body": [
+      ".form-group",
+      "  %label{for: \"$2\"} $1",
+      "  %select.custom-select{id: \"$2\", name: \"$2\"}",
+      "    %option{selected: \"selected\"} ${3:Select one}",
+      "    %option{value: \"$4\"} $5",
+      "    %option{value: \"$6\"} $7",
+      "    %option{value: \"$8\"} $9"
+    ]
+  },
+  "bs4-form-select-sizing": {
+    "prefix": "bs4-form-select-sizing",
+    "body": [
+      ".form-group",
+      "  %label{for: \"$2\"} $1",
+      "  %select.form-control{class: \"form-control-${3:sm|lg}\", id: \"$2\", name: \"$2\"}",
+      "    %option $4",
+      "    %option $5",
+      "    %option $6"
+    ]
+  },
+  "bs4-form-select": {
+    "prefix": "bs4-form-select",
+    "body": [
+      ".form-group",
+      "  %label{for: \"$2\"} $1",
+      "  %select.form-control{id: \"$2\", name: \"$2\"}",
+      "    %option $3",
+      "    %option $4",
+      "    %option $5"
+    ]
+  },
+  "bs4-form-submit": {
+    "prefix": "bs4-form-submit",
+    "body": [
+      "%button.btn{class: \"btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|\", type: \"submit\"} ${1:Submit}"
+    ]
+  },
+  "bs4-form-textarea": {
+    "prefix": "bs4-form-textarea",
+    "body": [
+      ".form-group",
+      "  %label{for: \"$2\"} $1",
+      "  %textarea.form-control{id: \"$2\", name: \"$2\", rows: \"${3:3}\"}"
+    ]
+  },
+  "bs4-form-validation": {
+    "prefix": "bs4-form-validation",
+    "body": [
+      "%label{for: \"${2:inputName}\"} ${1:Input label}",
+      "%input.form-control{class: \"${3:is-valid|is-invalid}\", id: \"${2:inputName}\", name: \"${2:inputName}\", type: \"text\"}/",
+      ".invalid-feedback",
+      "  ${4:Validation message}",
+      "/ TODO: This is for server side, there is another version for browser defaults"
+    ]
+  },
+  "bs4-igroup-button": {
+    "prefix": "bs4-igroup-button",
+    "body": [
+      ".input-group",
+      "  %span.input-group-btn",
+      "    %button.btn.btn-secondary{\"aria-label\": \"$2\", type: \"button\"} ${1:Action}",
+      "  %input.form-control{\"aria-label\": \"$6\", id: \"${5:name}\", name: \"${5:name}\", placeholder: \"$3\", type: \"${4:text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week}\"}/"
+    ]
+  },
+  "bs4-igroup-checkbox-radio": {
+    "prefix": "bs4-igroup-checkbox-radio",
+    "body": [
+      ".input-group",
+      "  %span.input-group-addon",
+      "    %input{\"aria-label\": \"$3\", id: \"${2:name}\", name: \"${2:name}\", type: \"${1:checkbox|radio}\"}/",
+      "  %input.form-control{\"aria-label\": \"$7\", id: \"${6:name}\", name: \"${6:name}\", placeholder: \"$4\", type: \"${5:text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week}\"}/"
+    ]
+  },
+  "bs4-igroup-dropdown-segmented": {
+    "prefix": "bs4-igroup-dropdown-segmented",
+    "body": [
+      ".input-group",
+      "  %span.input-group-btn",
+      "    %button.btn.btn-secondary.dropdown-toggle{\"aria-expanded\": \"false\", \"aria-haspopup\": \"true\", \"aria-label\": \"$2\", \"data-toggle\": \"dropdown\", type: \"button\"} ${1:Dropdown}",
+      "    %button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split{\"aria-expanded\": \"false\", \"aria-haspopup\": \"true\", \"data-toggle\": \"dropdown\", type: \"button\"}",
+      "      %span.sr-only Toggle Dropdown",
+      "    .dropdown-menu",
+      "      %a.dropdown-item{href: \"${4:#}\"} ${3:Action}",
+      "      %a.dropdown-item.disabled{href: \"${6:#}\"} ${5:Disabled action}",
+      "      .dropdown-divider{role: \"separator\"}",
+      "      %a.dropdown-item{href: \"${8:#}\"} ${7:Separated link}",
+      "  %input.form-control{\"aria-label\": \"$12\", id: \"${11:name}\", name: \"${11:name}\", placeholder: \"$9\", type: \"${10:text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week}\"}/"
+    ]
+  },
+  "bs4-igroup-dropdown": {
+    "prefix": "bs4-igroup-dropdown",
+    "body": [
+      ".input-group",
+      "  %span.input-group-btn",
+      "    %button.btn.btn-secondary.dropdown-toggle{\"aria-expanded\": \"false\", \"aria-haspopup\": \"true\", \"aria-label\": \"$2\", \"data-toggle\": \"dropdown\", type: \"button\"}",
+      "      ${1:Dropdown}",
+      "    .dropdown-menu",
+      "      %a.dropdown-item{href: \"${4:#}\"} ${3:Action}",
+      "      %a.dropdown-item.disabled{href: \"${6:#}\"} ${5:Disabled link}",
+      "      .dropdown-divider{role: \"separator\"}",
+      "      %a.dropdown-item{href: \"${8:#}\"} ${7:Separated link}",
+      "  %input.form-control{\"aria-label\": \"$12\", id: \"${11:name}\", name: \"${11:name}\", placeholder: \"$9\", type: \"${10:text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week}\"}/"
+    ]
+  },
+  "bs4-igroup-size": {
+    "prefix": "bs4-igroup-size",
+    "body": [
+      ".input-group{class: \"input-group-${1:sm|lg}\"}",
+      "  %span.input-group-addon{id: \"${3:prefixId}\"} ${2:prefix}",
+      "  %input.form-control{\"aria-describedby\": \"${3:prefixId}\", id: \"${6:name}\", name: \"${6:name}\", placeholder: \"${4:placeholder}\", type: \"${5:text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week}\"}/"
+    ]
+  },
+  "bs4-igroup-text-both": {
+    "prefix": "bs4-igroup-text-both",
+    "body": [
+      ".input-group",
+      "  %span.input-group-addon ${1:prefix}",
+      "  %input.form-control{id: \"${4:name}\", name: \"${4:name}\", placeholder: \"${2:placeholder}\", type: \"${3:text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week}\"}/",
+      "  %span.input-group-addon ${5:sufix}"
+    ]
+  },
+  "bs4-igroup-text-prefix": {
+    "prefix": "bs4-igroup-text-prefix",
+    "body": [
+      ".input-group",
+      "  %span.input-group-addon{id: \"${2:prefixId}\"} ${1:prefix}",
+      "  %input.form-control{\"aria-describedby\": \"${2:prefixId}\", id: \"${5:name}\", name: \"${5:name}\", placeholder: \"$3\", type: \"${4:text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week}\"}/"
+    ]
+  },
+  "bs4-igroup-text-sufix": {
+    "prefix": "bs4-igroup-text-sufix",
+    "body": [
+      ".input-group",
+      "  %input.form-control{\"aria-describedby\": \"${5:sufixId}\", id: \"${3:name}\", name: \"${3:name}\", placeholder: \"${1:placeholder}\", type: \"${2:text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week}\"}/",
+      "  %span.input-group-addon{id: \"${5:sufixId}\"} ${4:sufix}"
+    ]
+  },
+  "bs4-jumbotron": {
+    "prefix": "bs4-jumbotron",
+    "body": [
+      ".jumbotron",
+      "  %h1.display-3 ${1:Jumbo heading}",
+      "  %p.lead ${2:Jumbo helper text}",
+      "  %hr.my-2/",
+      "  %p ${3:More info}",
+      "  %p.lead",
+      "    %a.btn.btn-primary.btn-lg{href: \"${5:Jumbo action link}\", role: \"button\"} ${4:Jumbo action name}"
+    ]
+  },
+  "bs4-jumbotron-fluid": {
+    "prefix": "bs4-jumbotron-fluid",
+    "body": [
+      ".jumbotron.jumbotron-fluid",
+      "  .container",
+      "    %h1.display-3 ${1:Fluid jumbo heading}",
+      "    %p.lead ${2:Jumbo helper text}",
+      "    %hr.my-2/",
+      "    %p ${3:More info}",
+      "    %p.lead",
+      "      %a.btn.btn-primary.btn-lg{href: \"${5:Jumbo action link}\", role: \"button\"} ${4:Jumbo action name}"
+    ]
+  },
+  "bs4-grid-col": {
+    "prefix": "bs4-grid-col",
+    "body": [
+      "%div{class: \"col-${1:xs|sm|md|lg|xl}-${2:1-12}\"}",
+      "  $3"
+    ]
+  },
+  "bs4-grid-container-fluid": {
+    "prefix": "bs4-grid-container-fluid",
+    "body": [
+      ".container-fluid",
+      "  $1"
+    ]
+  },
+  "bs4-grid-container": {
+    "prefix": "bs4-grid-container",
+    "body": [
+      ".container",
+      "  $1"
+    ]
+  },
+  "bs4-grid": {
+    "prefix": "bs4-grid",
+    "body": [
+      ".container",
+      "  .row",
+      "    %div{class: \"col-${1:xs|sm|md|lg|xl}-${2:1-12}\"}",
+      "      $3",
+      "    $4"
+    ]
+  },
+  "bs4-grid-row": {
+    "prefix": "bs4-grid-row",
+    "body": [
+      ".row",
+      "  $1"
+    ]
+  },
+  "bs4-media-bottom": {
+    "prefix": "bs4-media-bottom",
+    "body": [
+      ".media",
+      "  %a.d-flex.align-self-bottom{href: \"${1:#}\"}",
+      "    %img{alt: \"$3\", src: \"$2\"}/",
+      "  .media-body",
+      "    %h5 ${4:Media heading}",
+      "    %p ${5:Media text}"
+    ]
+  },
+  "bs4-media": {
+    "prefix": "bs4-media",
+    "body": [
+      ".media",
+      "  %a.d-flex{href: \"${1:#}\"}",
+      "    %img{alt: \"$3\", src: \"$2\"}/",
+      "  .media-body",
+      "    %h5 ${4:Media heading}",
+      "    ${5:Media text}"
+    ]
+  },
+  "bs4-media-list": {
+    "prefix": "bs4-media-list",
+    "body": [
+      "%ul.list-unstyled",
+      "  %li.media",
+      "    %a.d-flex{href: \"${1:#}\"}",
+      "      %img{alt: \"$3\", src: \"$2\"}/",
+      "    .media-body",
+      "      %h5 ${4:Media heading}",
+      "      ${5:Media text}",
+      "  %li.media",
+      "    %a.d-flex{href: \"${6:#}\"}",
+      "      %img{alt: \"$8\", src: \"$7\"}/",
+      "    .media-body",
+      "      %h5 ${9:Media heading}",
+      "      ${10:Media text}",
+      "  %li.media",
+      "    %a.d-flex{href: \"${11:#}\"}",
+      "      %img{alt: \"$13\", src: \"$12\"}/",
+      "    .media-body",
+      "      %h5 ${14:Media heading}",
+      "      ${15:Media text}"
+    ]
+  },
+  "bs4-media-middle": {
+    "prefix": "bs4-media-middle",
+    "body": [
+      ".media",
+      "  %a.d-flex.align-self-center{href: \"${1:#}\"}",
+      "    %img{alt: \"$3\", src: \"$2\"}/",
+      "  .media-body",
+      "    %h5 ${4:Media heading}",
+      "    %p ${5:Media text}"
+    ]
+  },
+  "bs4-media-nesting": {
+    "prefix": "bs4-media-nesting",
+    "body": [
+      ".media",
+      "  %a.d-flex{href: \"${1:#}\"}",
+      "    %img{alt: \"$3\", src: \"$2\"}/",
+      "  .media-body",
+      "    %h5 ${4:Media heading}",
+      "    ${5:Media text}",
+      "    .media",
+      "      %a.d-flex{href: \"${6:#}\"}",
+      "        %img{alt: \"$8\", src: \"$7\"}/",
+      "      .media-body",
+      "        %h5 ${9:Media heading}",
+      "        ${10:Media text}"
+    ]
+  },
+  "bs4-media-right": {
+    "prefix": "bs4-media-right",
+    "body": [
+      ".media",
+      "  .media-body",
+      "    %h5 ${1:Media heading}",
+      "    ${2:Media text}",
+      "  %a.d-flex{href: \"${3:#}\"}",
+      "    %img{alt: \"$5\", src: \"$4\"}/"
+    ]
+  },
+  "bs4-media-top": {
+    "prefix": "bs4-media-top",
+    "body": [
+      ".media",
+      "  %a.d-flex.align-self-start{href: \"${1:#}\"}",
+      "    %img{alt: \"$3\", src: \"$2\"}/",
+      "  .media-body",
+      "    %h5 ${4:Media heading}",
+      "    %p ${5:Media text}"
+    ]
+  },
+  "bs4-responsive-hide-down": {
+    "prefix": "bs4-responsive-hide-down",
+    "body": [
+      ".d-none{class: \"d-${1:sm|md|lg|xl}-block\"}",
+      "  $2"
+    ]
+  },
+  "bs4-responsive-hide-up": {
+    "prefix": "bs4-responsive-hide-up",
+    "body": [
+      "%div{class: \"d-${1:sm|md|lg|xl}-none\"}",
+      "  $2"
+    ]
+  },
+  "bs4-responsive-print-show": {
+    "prefix": "bs4-responsive-print-show",
+    "body": [
+      "%div{class: \"d-print-${1:block|inline|inline-block|none}\"}",
+      "  $2"
+    ]
+  },
+  "bs4-list-a": {
+    "prefix": "bs4-list-a",
+    "body": [
+      ".list-group",
+      "  %a.list-group-item.list-group-item-action.active{href: \"${2:#}\"} ${1:Active item}",
+      "  %a.list-group-item.list-group-item-action{href: \"${4:#}\"} ${3:Item}",
+      "  %a.list-group-item.list-group-item-action.disabled{href: \"${6:#}\"} ${5:Disabled item}"
+    ]
+  },
+  "bs4-list-badge": {
+    "prefix": "bs4-list-badge",
+    "body": [
+      "%ul.list-group",
+      "  %li.list-group-item.d-flex.justify-content-between.align-items-center.active",
+      "    ${1:Active list item}",
+      "    %span.badge.badge-secondary.badge-pill ${2:pill1}",
+      "  %li.list-group-item.d-flex.justify-content-between.align-items-center",
+      "    ${3:List item}",
+      "    %span.badge.badge-secondary.badge-pill ${4:pill2}",
+      "  %li.list-group-item.d-flex.justify-content-between.align-items-center.disabled",
+      "    ${5:Disabled item}",
+      "    %span.badge.badge-secondary.badge-pill ${6:pill3}"
+    ]
+  },
+  "bs4-list-button": {
+    "prefix": "bs4-list-button",
+    "body": [
+      ".list-group",
+      "  %button.list-group-item.list-group-item-action.active{type: \"button\"} ${1:Active item}",
+      "  %button.list-group-item.list-group-item-action{type: \"button\"} ${2:Item}",
+      "  %button.list-group-item.list-group-item-action.disabled{type: \"button\"} ${3:Disabled item}"
+    ]
+  },
+  "bs4-list-colors": {
+    "prefix": "bs4-list-colors",
+    "body": [
+      ".list-group",
+      "  %a.list-group-item.list-group-item-action.active{class: \"list-group-item-${3|primary,secondary,success,danger,warning,info,light,dark|}\", href: \"${2:#}\"} ${1:Active item}",
+      "  %a.list-group-item.list-group-item-action{class: \"list-group-item-${6|primary,secondary,success,danger,warning,info,light,dark|}\", href: \"${5:#}\"} ${4:Item}",
+      "  %a.list-group-item.list-group-item-action.disabled{class: \"list-group-item-${9|primary,secondary,success,danger,warning,info,light,dark|}\", href: \"${8:#}\"} ${7:Disabled item}"
+    ]
+  },
+  "bs4-list-custom": {
+    "prefix": "bs4-list-custom",
+    "body": [
+      ".list-group",
+      "  %a.list-group-item.list-group-item-action.flex-column.align-items-start.active{href: \"${1:#}\"}",
+      "    .d-flex.w-100.justify-content-between",
+      "      %h5.mb-1 ${2:Heading}",
+      "      %small ${3:small}",
+      "    %p.mb-1 ${4:Paragraph}",
+      "    %small ${5:paragraph footer}",
+      "  %a.list-group-item.list-group-item-action.flex-column.align-items-start{href: \"${6:#}\"}",
+      "    .d-flex.w-100.justify-content-between",
+      "      %h5.mb-1 ${7:Heading}",
+      "      %small ${8:small}",
+      "    %p.mb-1 ${9:Paragraph}",
+      "    %small ${10:paragraph footer}",
+      "  %a.list-group-item.list-group-item-action.flex-column.align-items-start.disabled{href: \"${11:#}\"}",
+      "    .d-flex.w-100.justify-content-between",
+      "      %h5.mb-1 ${12:Heading}",
+      "      %small ${13:small}",
+      "    %p.mb-1 ${14:Paragraph}",
+      "    %small ${15:paragraph footer}"
+    ]
+  },
+  "bs4-list": {
+    "prefix": "bs4-list",
+    "body": [
+      "%ul.list-group",
+      "  %li.list-group-item.active ${1:Active item}",
+      "  %li.list-group-item ${2:Item}",
+      "  %li.list-group-item.disabled ${3:Disabled item}"
+    ]
+  },
+  "bs4-modal-customize": {
+    "prefix": "bs4-modal-customize",
+    "body": [
+      "/ Button trigger modal",
+      "%button.btn.btn-primary.btn-lg{\"data-target\": \"\\#${2:modelId}\", \"data-toggle\": \"modal\", type: \"button\"}",
+      "  ${1:Launch}",
+      "/ Modal",
+      ".modal.fade{\"aria-hidden\": \"true\", \"aria-labelledby\": \"${4:modelTitleId}\", id: \"${2:modelId}\", role: \"dialog\", tabindex: \"-1\"}",
+      "  .modal-dialog{role: \"document\"}",
+      "    .modal-content",
+      "      .modal-header",
+      "        %h5.modal-title ${3:Modal title}",
+      "        %button.close{\"aria-label\": \"Close\", \"data-dismiss\": \"modal\", type: \"button\"}",
+      "          %span{\"aria-hidden\": \"true\"} ×",
+      "      .modal-body",
+      "        .container-fluid",
+      "          ${7:Add rows here}",
+      "      .modal-footer",
+      "        %button.btn.btn-secondary{\"data-dismiss\": \"modal\", type: \"button\"} ${5:Close}",
+      "        %button.btn.btn-primary{type: \"button\"} ${6:Save}",
+      ":javascript",
+      "  $('#exampleModal').on('show.bs.modal', event => {",
+      "  \tvar button = $(event.relatedTarget);",
+      "  \tvar modal = $(this);",
+      "  \t// Use above variables to manipulate the DOM",
+      "  \t$8",
+      "  });"
+    ]
+  },
+  "bs4-modal": {
+    "prefix": "bs4-modal",
+    "body": [
+      "/ Button trigger modal",
+      "%button.btn.btn-primary.btn-lg{\"data-target\": \"\\#${2:modelId}\", \"data-toggle\": \"modal\", type: \"button\"}",
+      "  ${1:Launch}",
+      "/ Modal",
+      ".modal.fade{\"aria-hidden\": \"true\", \"aria-labelledby\": \"${4:modelTitleId}\", id: \"${2:modelId}\", role: \"dialog\", tabindex: \"-1\"}",
+      "  .modal-dialog{role: \"document\"}",
+      "    .modal-content",
+      "      .modal-header",
+      "        %h5.modal-title ${3:Modal title}",
+      "        %button.close{\"aria-label\": \"Close\", \"data-dismiss\": \"modal\", type: \"button\"}",
+      "          %span{\"aria-hidden\": \"true\"} ×",
+      "      .modal-body",
+      "        ${7:Body}",
+      "      .modal-footer",
+      "        %button.btn.btn-secondary{\"data-dismiss\": \"modal\", type: \"button\"} ${5:Close}",
+      "        %button.btn.btn-primary{type: \"button\"} ${6:Save}"
+    ]
+  },
+  "bs4-modal-grid": {
+    "prefix": "bs4-modal-grid",
+    "body": [
+      "/ Button trigger modal",
+      "%button.btn.btn-primary.btn-lg{\"data-target\": \"\\#${2:modelId}\", \"data-toggle\": \"modal\", type: \"button\"}",
+      "  ${1:Launch}",
+      "/ Modal",
+      ".modal.fade{\"aria-hidden\": \"true\", \"aria-labelledby\": \"${4:modelTitleId}\", id: \"${2:modelId}\", role: \"dialog\", tabindex: \"-1\"}",
+      "  .modal-dialog{role: \"document\"}",
+      "    .modal-content",
+      "      .modal-header",
+      "        %h5.modal-title ${3:Modal title}",
+      "        %button.close{\"aria-label\": \"Close\", \"data-dismiss\": \"modal\", type: \"button\"}",
+      "          %span{\"aria-hidden\": \"true\"} ×",
+      "      .modal-body",
+      "        .container-fluid",
+      "          ${7:Add rows here}",
+      "      .modal-footer",
+      "        %button.btn.btn-secondary{\"data-dismiss\": \"modal\", type: \"button\"} ${5:Close}",
+      "        %button.btn.btn-primary{type: \"button\"} ${6:Save}"
+    ]
+  },
+  "bs4-modal-sizes": {
+    "prefix": "bs4-modal-sizes",
+    "body": [
+      "/ Button trigger modal",
+      "%button.btn.btn-primary.btn-lg{\"data-target\": \"\\#${2:modelId}\", \"data-toggle\": \"modal\", type: \"button\"}",
+      "  ${1:Launch}",
+      "/ Modal",
+      ".modal.fade{\"aria-hidden\": \"true\", \"aria-labelledby\": \"${5:modelTitleId}\", id: \"${2:modelId}\", role: \"dialog\", tabindex: \"-1\"}",
+      "  .modal-dialog{class: \"modal-${3:sm|lg}\", role: \"document\"}",
+      "    .modal-content",
+      "      .modal-header",
+      "        %h5.modal-title ${3:Modal title}",
+      "        %button.close{\"aria-label\": \"Close\", \"data-dismiss\": \"modal\", type: \"button\"}",
+      "          %span{\"aria-hidden\": \"true\"} ×",
+      "      .modal-body",
+      "        ${8:Body}",
+      "      .modal-footer",
+      "        %button.btn.btn-secondary{\"data-dismiss\": \"modal\", type: \"button\"} ${6:Close}",
+      "        %button.btn.btn-primary{type: \"button\"} ${7:Save}"
+    ]
+  },
+  "bs4-nav-a": {
+    "prefix": "bs4-nav-a",
+    "body": [
+      "%nav.nav{class: \"${1:justify-content-center|justify-content-end}\"}",
+      "  %a.nav-link.active{href: \"${3:#}\"} ${2:Active link}",
+      "  %a.nav-link{href: \"${5:#}\"} ${4:Link}",
+      "  %a.nav-link.disabled{href: \"#\"} ${6:Disabled link}"
+    ]
+  },
+  "bs4-nav-complete": {
+    "prefix": "bs4-nav-complete",
+    "body": [
+      "/ Nav tabs",
+      "%ul.nav{class: \"nav-${2:tabs|pills}\", id: \"${1:navId}\"}",
+      "  %li.nav-item",
+      "    %a.nav-link.active{href: \"\\#${4:tab1Id}\"} ${3:Active}",
+      "  %li.nav-item.dropdown",
+      "    %a.nav-link.dropdown-toggle{\"aria-expanded\": \"false\", \"aria-haspopup\": \"true\", \"data-toggle\": \"dropdown\", href: \"#\", role: \"button\"} ${5:Dropdown}",
+      "    .dropdown-menu",
+      "      %a.dropdown-item{href: \"\\#${7:tab2Id}\"} ${6:Action}",
+      "      %a.dropdown-item{href: \"\\#${9:tab3Id}\"} ${8:Another action}",
+      "      .dropdown-divider",
+      "      %a.dropdown-item{href: \"\\#${11:tab4Id}\"} ${10:Action}",
+      "  %li.nav-item",
+      "    %a.nav-link{href: \"\\#${13:tab5Id}\"} ${12:Another link}",
+      "  %li.nav-item",
+      "    %a.nav-link.disabled{href: \"#\"} ${14:Disabled}",
+      "/ Tab panes",
+      ".tab-content",
+      "  .tab-pane.fade.show.active{id: \"${4:tab1Id}\", role: \"tabpanel\"} $15",
+      "  .tab-pane.fade{id: \"${7:tab2Id}\", role: \"tabpanel\"} $16",
+      "  .tab-pane.fade{id: \"${9:tab3Id}\", role: \"tabpanel\"} $17",
+      "  .tab-pane.fade{id: \"${11:tab4Id}\", role: \"tabpanel\"} $18",
+      "  .tab-pane.fade{id: \"${13:tab5Id}\", role: \"tabpanel\"} $19",
+      ":javascript",
+      "  $('#${1:navId} a').click(e => {",
+      "  \te.preventDefault();",
+      "  \t$(this).tab('show');",
+      "  });"
+    ]
+  },
+  "bs4-nav-tabs-pills-a-variation": {
+    "prefix": "bs4-nav-tabs-pills-a-variation",
+    "body": [
+      "%nav.nav{class: \"nav-${1:tabs|pills} ${2:nav-stacked}\"}",
+      "  %a.nav-link.active{href: \"${4:#}\"} ${3:Active link}",
+      "  %a.nav-link{href: \"${6:#}\"} ${5:Link}",
+      "  %a.nav-link.disabled{href: \"#\"} ${7:Disabled link}"
+    ]
+  },
+  "bs4-nav-tabs-pills-dropdown": {
+    "prefix": "bs4-nav-tabs-pills-dropdown",
+    "body": [
+      "%ul.nav{class: \"nav-${1:tabs|pills}\"}",
+      "  %li.nav-item",
+      "    %a.nav-link.active{href: \"${3:#}\"} ${2:Active}",
+      "  %li.nav-item.dropdown",
+      "    %a.nav-link.dropdown-toggle{\"aria-expanded\": \"false\", \"aria-haspopup\": \"true\", \"data-toggle\": \"dropdown\", href: \"#\", role: \"button\"} ${4:Dropdown}",
+      "    .dropdown-menu",
+      "      %a.dropdown-item{href: \"${6:#}\"} ${5:Action}",
+      "      %a.dropdown-item{href: \"${8:#}\"} ${7:Another action}",
+      "      .dropdown-divider",
+      "      %a.dropdown-item{href: \"${10:#}\"} ${9:Action}",
+      "  %li.nav-item",
+      "    %a.nav-link{href: \"${12:#}\"} ${11:Another link}",
+      "  %li.nav-item",
+      "    %a.nav-link.disabled{href: \"#\"} ${13:Disabled}"
+    ]
+  },
+  "bs4-nav-tabs-pills-ul-variation": {
+    "prefix": "bs4-nav-tabs-pills-ul-variation",
+    "body": [
+      "%ul.nav{class: \"nav-${1:tabs|pills} ${2:nav-stacked}\"}",
+      "  %li.nav-item",
+      "    %a.nav-link.active{href: \"${4:#}\"} ${3:Active}",
+      "  %li.nav-item",
+      "    %a.nav-link{href: \"${6:#}\"} ${5:Link}",
+      "  %li.nav-item.disabled",
+      "    %a.nav-link{href: \"#\"} ${7:Disabled}"
+    ]
+  },
+  "bs4-nav-ul": {
+    "prefix": "bs4-nav-ul",
+    "body": [
+      "%ul.nav{class: \"${1:justify-content-center|justify-content-end}\"}",
+      "  %li.nav-item",
+      "    %a.nav-link.active{href: \"${3:#}\"} ${2:Active link}",
+      "  %li.nav-item",
+      "    %a.nav-link{href: \"${5:#}\"} ${4:Link}",
+      "  %li.nav-item",
+      "    %a.nav-link.disabled{href: \"#\"} ${6:Disabled link}"
+    ]
+  },
+  "bs4-navbar-background-color": {
+    "prefix": "bs4-navbar-background-color",
+    "body": [
+      "%nav.navbar{class: \"navbar-expand-${1:sm|md|lg|-xl} navbar-${2:dark|light}\", style: \"background-color: ${3:#e3f2fd;}\"}",
+      "  %a.navbar-brand{href: \"${5:#}\"} ${4:Navbar}",
+      "  %button.navbar-toggler.d-lg-none{\"aria-controls\": \"${6:collapsibleNavId}\", \"aria-expanded\": \"false\", \"aria-label\": \"${7:Toggle navigation}\", \"data-target\": \"\\#${6:collapsibleNavId}\", \"data-toggle\": \"collapse\", type: \"button\"}",
+      "  .collapse.navbar-collapse{id: \"${6:collapsibleNavId}\"}",
+      "    %ul.navbar-nav.mr-auto.mt-2.mt-lg-0",
+      "      %li.nav-item.active",
+      "        %a.nav-link{href: \"${9:#}\"}",
+      "          ${8:Home}",
+      "          %span.sr-only (current)",
+      "      %li.nav-item",
+      "        %a.nav-link{href: \"${11:#}\"} ${10:Link}",
+      "      %li.nav-item.dropdown",
+      "        %a.nav-link.dropdown-toggle{\"aria-expanded\": \"false\", \"aria-haspopup\": \"true\", \"data-toggle\": \"dropdown\", href: \"${13:#}\", id: \"${14:dropdownId}\"} ${12:Dropdown}",
+      "        .dropdown-menu{\"aria-labelledby\": \"${14:dropdownId}\"}",
+      "          %a.dropdown-item{href: \"${16:#}\"} ${15:Action 1}",
+      "          %a.dropdown-item{href: \"${18:#}\"} ${17:Action 2}",
+      "    %form.form-inline.my-2.my-lg-0",
+      "      %input.form-control.mr-sm-2{placeholder: \"${19:Search}\", type: \"text\"}/",
+      "      %button.btn.btn-outline-success.my-2.my-sm-0{type: \"submit\"} ${20:Search}"
+    ]
+  },
+  "bs4-navbar-background": {
+    "prefix": "bs4-navbar-background",
+    "body": [
+      "%nav.navbar{class: \"navbar-expand-${1:sm|md|lg|-xl} navbar-${2:dark|light} bg-${3|primary,secondary,success,danger,warning,info,light,dark|}\"}",
+      "  %a.navbar-brand{href: \"${5:#}\"} ${4:Navbar}",
+      "  %button.navbar-toggler.d-lg-none{\"aria-controls\": \"${6:collapsibleNavId}\", \"aria-expanded\": \"false\", \"aria-label\": \"${7:Toggle navigation}\", \"data-target\": \"\\#${6:collapsibleNavId}\", \"data-toggle\": \"collapse\", type: \"button\"}",
+      "  .collapse.navbar-collapse{id: \"${6:collapsibleNavId}\"}",
+      "    %ul.navbar-nav.mr-auto.mt-2.mt-lg-0",
+      "      %li.nav-item.active",
+      "        %a.nav-link{href: \"${9:#}\"}",
+      "          ${8:Home}",
+      "          %span.sr-only (current)",
+      "      %li.nav-item",
+      "        %a.nav-link{href: \"${11:#}\"} ${10:Link}",
+      "      %li.nav-item.dropdown",
+      "        %a.nav-link.dropdown-toggle{\"aria-expanded\": \"false\", \"aria-haspopup\": \"true\", \"data-toggle\": \"dropdown\", href: \"${13:#}\", id: \"${14:dropdownId}\"} ${12:Dropdown}",
+      "        .dropdown-menu{\"aria-labelledby\": \"${14:dropdownId}\"}",
+      "          %a.dropdown-item{href: \"${16:#}\"} ${15:Action 1}",
+      "          %a.dropdown-item{href: \"${18:#}\"} ${17:Action 2}",
+      "    %form.form-inline.my-2.my-lg-0",
+      "      %input.form-control.mr-sm-2{placeholder: \"${19:Search}\", type: \"text\"}/",
+      "      %button.btn.btn-outline-success.my-2.my-sm-0{type: \"submit\"} ${20:Search}"
+    ]
+  },
+  "bs4-navbar": {
+    "prefix": "bs4-navbar",
+    "body": [
+      "%nav.navbar.navbar-light.bg-light{class: \"navbar-expand-${1:sm|md|lg|-xl}\"}",
+      "  %a.navbar-brand{href: \"${3:#}\"} ${2:Navbar}",
+      "  %button.navbar-toggler.d-lg-none{\"aria-controls\": \"${4:collapsibleNavId}\", \"aria-expanded\": \"false\", \"aria-label\": \"${5:Toggle navigation}\", \"data-target\": \"\\#${4:collapsibleNavId}\", \"data-toggle\": \"collapse\", type: \"button\"}",
+      "    %span.navbar-toggler-icon",
+      "  .collapse.navbar-collapse{id: \"${4:collapsibleNavId}\"}",
+      "    %ul.navbar-nav.mr-auto.mt-2.mt-lg-0",
+      "      %li.nav-item.active",
+      "        %a.nav-link{href: \"${7:#}\"}",
+      "          ${6:Home}",
+      "          %span.sr-only (current)",
+      "      %li.nav-item",
+      "        %a.nav-link{href: \"${9:#}\"} ${8:Link}",
+      "      %li.nav-item.dropdown",
+      "        %a.nav-link.dropdown-toggle{\"aria-expanded\": \"false\", \"aria-haspopup\": \"true\", \"data-toggle\": \"dropdown\", href: \"${11:#}\", id: \"${12:dropdownId}\"} ${10:Dropdown}",
+      "        .dropdown-menu{\"aria-labelledby\": \"${12:dropdownId}\"}",
+      "          %a.dropdown-item{href: \"${14:#}\"} ${13:Action 1}",
+      "          %a.dropdown-item{href: \"${16:#}\"} ${15:Action 2}",
+      "    %form.form-inline.my-2.my-lg-0",
+      "      %input.form-control.mr-sm-2{placeholder: \"${17:Search}\", type: \"text\"}/",
+      "      %button.btn.btn-outline-success.my-2.my-sm-0{type: \"submit\"} ${18:Search}"
+    ]
+  },
+  "bs4-navbar-minimal-a": {
+    "prefix": "bs4-navbar-minimal-a",
+    "body": [
+      "%nav.navbar.navbar-expand.navbar-light.bg-light",
+      "  .nav.navbar-nav",
+      "    %a.nav-item.nav-link.active{href: \"${2:#}\"}",
+      "      ${1:Home}",
+      "      %span.sr-only (current)",
+      "    %a.nav-item.nav-link{href: \"${4:#}\"} ${3:Home}"
+    ]
+  },
+  "bs4-navbar-minimal-ul": {
+    "prefix": "bs4-navbar-minimal-ul",
+    "body": [
+      "%nav.navbar.navbar-expand.navbar-light.bg-light",
+      "  %ul.nav.navbar-nav",
+      "    %li.nav-item.active",
+      "      %a.nav-link{href: \"${2:#}\"}",
+      "        ${1:Nav 1}",
+      "        %span.sr-only (current)",
+      "    %li.nav-item",
+      "      %a.nav-link{href: \"${4:#}\"} ${3:Nav 2}"
+    ]
+  },
+  "bs4-navbar-non-responsive": {
+    "prefix": "bs4-navbar-non-responsive",
+    "body": [
+      "%nav.navbar.navbar-expand.navbar-light.bg-faded",
+      "  %a.navbar-brand{href: \"${2:#}\"} ${1:Navbar}",
+      "  %ul.navbar-nav.mr-auto.mt-2.mt-lg-0",
+      "    %li.nav-item.active",
+      "      %a.nav-link{href: \"${4:#}\"}",
+      "        ${3:Active}",
+      "        %span.sr-only (current)",
+      "    %li.nav-item",
+      "      %a.nav-link{href: \"${6:#}\"} ${5:Link}",
+      "    %li.nav-item.dropdown",
+      "      %a.nav-link.dropdown-toggle{\"aria-expanded\": \"false\", \"aria-haspopup\": \"true\", \"data-toggle\": \"dropdown\", href: \"${8:#}\", id: \"${9:dropdownId}\"} ${7:Dropdown}",
+      "      .dropdown-menu{\"aria-labelledby\": \"${9:dropdownId}\"}",
+      "        %a.dropdown-item{href: \"${11:#}\"} ${10:Action 1}",
+      "        %a.dropdown-item{href: \"${13:#}\"} ${12:Action 2}",
+      "  %form.form-inline.my-2.my-lg-0",
+      "    %input.form-control.mr-sm-2{placeholder: \"${17:Search}\", type: \"text\"}/",
+      "    %button.btn.btn-outline-success.my-2.my-sm-0{type: \"submit\"} ${18:Search}"
+    ]
+  },
+  "bs4-navbar-placement": {
+    "prefix": "bs4-navbar-placement",
+    "body": [
+      "%nav.navbar.navbar-expand-lg.navbar-light.bg-light{class: \"${1:fixed-top|fixed-bottom|sticky-top}\"}",
+      "  %a.navbar-brand{href: \"${3:#}\"} ${2:Navbar}",
+      "  %button.navbar-toggler.hidden-lg-up{\"aria-controls\": \"${4:collapsibleNavId}\", \"aria-expanded\": \"false\", \"aria-label\": \"${5:Toggle navigation}\", \"data-target\": \"\\#${4:collapsibleNavId}\", \"data-toggle\": \"collapse\", type: \"button\"}",
+      "  .collapse.navbar-collapse{id: \"${4:collapsibleNavId}\"}",
+      "    %ul.navbar-nav.mr-auto.mt-2.mt-lg-0",
+      "      %li.nav-item.active",
+      "        %a.nav-link{href: \"${7:#}\"}",
+      "          ${6:Home}",
+      "          %span.sr-only (current)",
+      "      %li.nav-item",
+      "        %a.nav-link{href: \"${9:#}\"} ${8:Link}",
+      "      %li.nav-item.dropdown",
+      "        %a.nav-link.dropdown-toggle{\"aria-expanded\": \"false\", \"aria-haspopup\": \"true\", \"data-toggle\": \"dropdown\", href: \"${11:#}\", id: \"${12:dropdownId}\"} ${10:Dropdown}",
+      "        .dropdown-menu{\"aria-labelledby\": \"${12:dropdownId}\"}",
+      "          %a.dropdown-item{href: \"${14:#}\"} ${13:Action 1}",
+      "          %a.dropdown-item{href: \"${16:#}\"} ${15:Action 2}",
+      "    %form.form-inline.my-2.my-lg-0",
+      "      %input.form-control.mr-sm-2{placeholder: \"${17:Search}\", type: \"text\"}/",
+      "      %button.btn.btn-outline-success.my-2.my-sm-0{type: \"submit\"} ${18:Search}"
+    ]
+  },
+  "bs4-pagination-alignment": {
+    "prefix": "bs4-pagination-alignment",
+    "body": [
+      "%nav{\"aria-label\": \"${1:Page navigation}\"}",
+      "  %ul.pagination{class: \"justify-content-${2:center|end}\"}",
+      "    %li.page-item.disabled",
+      "      %a.page-link{\"aria-label\": \"${3:Previous}\", href: \"${4:#}\"}",
+      "        %span{\"aria-hidden\": \"true\"} «",
+      "        %span.sr-only ${3:Previous}",
+      "    %li.page-item.active",
+      "      %a.page-link{href: \"${6:#}\"} $5",
+      "    %li.page-item",
+      "      %a.page-link{href: \"${8:#}\"} $7",
+      "    %li.page-item",
+      "      %a.page-link{\"aria-label\": \"${9:Next}\", href: \"${10:#}\"}",
+      "        %span{\"aria-hidden\": \"true\"} »",
+      "        %span.sr-only ${9:Next}"
+    ]
+  },
+  "bs4-pagination": {
+    "prefix": "bs4-pagination",
+    "body": [
+      "%nav{\"aria-label\": \"${1:Page navigation}\"}",
+      "  %ul.pagination",
+      "    %li.page-item.disabled",
+      "      %a.page-link{\"aria-label\": \"${2:Previous}\", href: \"${3:#}\"}",
+      "        %span{\"aria-hidden\": \"true\"} «",
+      "        %span.sr-only ${2:Previous}",
+      "    %li.page-item.active",
+      "      %a.page-link{href: \"${5:#}\"} $4",
+      "    %li.page-item",
+      "      %a.page-link{href: \"${7:#}\"} $6",
+      "    %li.page-item",
+      "      %a.page-link{\"aria-label\": \"${8:Next}\", href: \"${9:#}\"}",
+      "        %span{\"aria-hidden\": \"true\"} »",
+      "        %span.sr-only ${8:Next}"
+    ]
+  },
+  "bs4-pagination-sized": {
+    "prefix": "bs4-pagination-sized",
+    "body": [
+      "%nav{\"aria-label\": \"${1:Page navigation}\"}",
+      "  %ul.pagination{class: \"pagination-${2:lg|sm}\"}",
+      "    %li.page-item.disabled",
+      "      %a.page-link{\"aria-label\": \"${3:Previous}\", href: \"${4:#}\"}",
+      "        %span{\"aria-hidden\": \"true\"} «",
+      "        %span.sr-only ${3:Previous}",
+      "    %li.page-item.active",
+      "      %a.page-link{href: \"${6:#}\"} $5",
+      "    %li.page-item",
+      "      %a.page-link{href: \"${8:#}\"} $7",
+      "    %li.page-item",
+      "      %a.page-link{\"aria-label\": \"${9:Next}\", href: \"${10:#}\"}",
+      "        %span{\"aria-hidden\": \"true\"} »",
+      "        %span.sr-only ${9:Next}"
+    ]
+  },
+  "bs4-popover": {
+    "prefix": "bs4-popover",
+    "body": [
+      "%button.btn.btn-secondary{\"data-content\": \"${3:Popup content}\", \"data-toggle\": \"popover\", title: \"${2:Popup title}\", type: \"button\"} ${1:Trigger}"
+    ]
+  },
+  "bs4-popover-direction": {
+    "prefix": "bs4-popover-direction",
+    "body": [
+      "%button.btn.btn-secondary{\"data-content\": \"${3:Popup content}\", \"data-placement\": \"${4:top|right|bottom|left}\", \"data-toggle\": \"popover\", title: \"${2:Popup title}\", type: \"button\"} ${1:Trigger}"
+    ]
+  },
+  "bs4-popover-dismissable": {
+    "prefix": "bs4-popover-dismissable",
+    "body": [
+      "%a.btn.btn-secondary{\"data-content\": \"${3:Popup content}\", \"data-toggle\": \"popover\", \"data-trigger\": \"focus\", tabindex: \"0\", title: \"${2:Popup title}\"} ${1:Trigger}"
+    ]
+  },
+  "bs4-progress-colored": {
+    "prefix": "bs4-progress-colored",
+    "body": [
+      ".progress",
+      "  .progress-bar{\"aria-valuemax\": \"${3:100}\", \"aria-valuemin\": \"${2:0}\", \"aria-valuenow\": \"${4:25}\", class: \"bg-${5|primary,secondary,success,danger,warning,info,light,dark|}\", role: \"progressbar\", style: \"width: ${4:25}%;\"} ${1:Description}"
+    ]
+  },
+  "bs4-progress": {
+    "prefix": "bs4-progress",
+    "body": [
+      ".progress",
+      "  .progress-bar{\"aria-valuemax\": \"${3:100}\", \"aria-valuemin\": \"${2:0}\", \"aria-valuenow\": \"${4:25}\", role: \"progressbar\", style: \"width: ${4:25}%;\"} ${1:Description}"
+    ]
+  },
+  "bs4-progress-ie9": {
+    "prefix": "bs4-progress-ie9",
+    "body": [
+      ".text-xs-center{id: \"${2:progressId}\"} ${1:Description}",
+      "%progress.progress{\"aria-describedby\": \"${2:progressId}\", max: \"${3:100}\", value: \"$4\"}",
+      "  .progress",
+      "    %span.progress-bar{style: \"width: $5%;\"}"
+    ]
+  },
+  "bs4-progress-striped": {
+    "prefix": "bs4-progress-striped",
+    "body": [
+      ".progress",
+      "  .progress-bar.progress-bar-striped{\"aria-valuemax\": \"${3:100}\", \"aria-valuemin\": \"${2:0}\", \"aria-valuenow\": \"${4:25}\", class: \"${6:progress-bar-animated} bg-${5|primary,secondary,success,danger,warning,info,light,dark|}\", role: \"progressbar\", style: \"width: ${4:25}%;\"} ${1:Description}"
+    ]
+  },
+  "bs4-scrollspy": {
+    "prefix": "bs4-scrollspy",
+    "body": [
+      ":css",
+      "  ${1:div|body} {",
+      "  \tposition: relative;",
+      "  }",
+      "\\&lt;${1:div|body} data-spy=\"scroll\" data-target=\"#${2:navId}\"&gt;",
+      "$4",
+      "%div{id: \"${2:navId}\"}",
+      "  %ul.nav.nav-tabs{role: \"tablist\"}",
+      "    $3",
+      "$5",
+      "${1:div|body}&gt;",
+      ":javascript",
+      "  $('$1{1:div|body}').scrollspy({",
+      "  \ttarget: '#${2:navId}'",
+      "  });"
+    ]
+  },
+  "bs4-tooltip": {
+    "prefix": "bs4-tooltip",
+    "body": [
+      "%button.btn.btn-secondary{\"data-placement\": \"${2:top|right|bottom|left}\", \"data-toggle\": \"tooltip\", title: \"$1\", type: \"button\"}",
+      "  ${3:Button name}"
+    ]
+  },
+  "bs4-4-html5": {
+    "prefix": "bs4-4-html5",
+    "body": [
+      "!!!",
+      "%html{lang: \"en\"}",
+      "  %head",
+      "    %meta{content: \"text/html; charset=UTF-8\", \"http-equiv\": \"Content-Type\"}/",
+      "    %title ${1:Title}",
+      "    / Required meta tags",
+      "    %meta{charset: \"utf-8\"}/",
+      "    %meta{content: \"width=device-width, initial-scale=1, shrink-to-fit=no\", name: \"viewport\"}/",
+      "    / Bootstrap CSS",
+      "    %link{crossorigin: \"anonymous\", href: \"${2:https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css}\", integrity: \"${3:sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T}\", rel: \"stylesheet\"}/",
+      "  %body",
+      "    $10$END$",
+      "    / Optional JavaScript",
+      "    / jQuery first, then Popper.js, then Bootstrap JS",
+      "    %script{crossorigin: \"anonymous\", integrity: \"${5:sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo}\", src: \"${4:https://code.jquery.com/jquery-3.3.1.slim.min.js}\"}",
+      "    %script{crossorigin: \"anonymous\", integrity: \"${7:sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1}\", src: \"${6:https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js}\"}",
+      "    %script{crossorigin: \"anonymous\", integrity: \"${9:sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM}\", src: \"${8:https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js}\"}"
+    ]
+  }
+}

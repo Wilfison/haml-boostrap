@@ -1,0 +1,5 @@
+.form-group
+  %label.custom-file
+    %input.custom-file-input{"aria-describedby": "${3:fileHelpId}", id: "$2", name: "$2", placeholder: "$1", type: "file"}/
+    %span.custom-file-control
+  %small.form-text.text-muted{id: "${3:fileHelpId}"} ${4:Help text}

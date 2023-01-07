@@ -1,0 +1,27 @@
+.carousel.slide{"data-ride": "carousel", id: "${1:carouselId}"}
+  %ol.carousel-indicators
+    %li.active{"data-slide-to": "0", "data-target": "\#${1:carouselId}"}
+    %li{"data-slide-to": "1", "data-target": "\#${1:carouselId}"}
+    %li{"data-slide-to": "2", "data-target": "\#${1:carouselId}"}
+  .carousel-inner{role: "listbox"}
+    .carousel-item.active
+      %img{alt: "${3:First slide}", "data-src": "${2:holder.js/900x500/auto/#777:#555/text:First slide}"}/
+      .carousel-caption.d-none.d-md-block
+        %h3 ${4:Title}
+        %p ${5:Description}
+    .carousel-item
+      %img{alt: "${7:Second slide}", "data-src": "${6:holder.js/900x500/auto/#666:#444/text:Second slide}"}/
+      .carousel-caption.d-none.d-md-block
+        %h3 ${8:Title}
+        %p ${9:Description}
+    .carousel-item
+      %img{alt: "${11:Third slide}", "data-src": "${10:holder.js/900x500/auto/#666:#444/text:Third slide}"}/
+      .carousel-caption.d-none.d-md-block
+        %h3 ${12:Title}
+        %p ${13:Description}
+  %a.carousel-control-prev{"data-slide": "prev", href: "\#${1:carouselId}", role: "button"}
+    %span.carousel-control-prev-icon{"aria-hidden": "true"}
+    %span.sr-only Previous
+  %a.carousel-control-next{"data-slide": "next", href: "\#${1:carouselId}", role: "button"}
+    %span.carousel-control-next-icon{"aria-hidden": "true"}
+    %span.sr-only Next

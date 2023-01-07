@@ -1,0 +1,6 @@
+.dropdown.open
+  %button.btn.dropdown-toggle{"aria-expanded": "false", "aria-haspopup": "true", class: "btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|", "data-toggle": "dropdown", id: "${3:triggerId}", type: "button"}
+    ${1:Dropdown}
+  .dropdown-menu{"aria-labelledby": "${3:triggerId}"}
+    %a.dropdown-item{href: "${5:#}"} ${4:Action}
+    %a.dropdown-item.disabled{href: "${7:#}"} ${6:Disabled action}
