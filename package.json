@@ -1,7 +1,7 @@
 {
   "name": "haml-boostrap",
   "displayName": "HAML Boostrap 4,5 Snippets",
-  "description": "Bootstrap 4,5 Snippets for HAML",
+  "description": "HAML Bootstrap 4,5 Snippets for Vs Code",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.74.0"
