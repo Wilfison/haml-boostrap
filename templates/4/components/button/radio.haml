@@ -1,10 +1,10 @@
 .btn-group{'data-toggle': 'buttons'}
-  %label.btn.active{class: 'btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}'}
-    %input{autocomplete: 'off', checked: 'checked', id: '$3', name: '$3', type: 'radio'}>/
-    $2
-  %label.btn{class: 'btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}'}
-    %input{autocomplete: 'off', id: '$5', name: '$5', type: 'radio'}>/
+  %label.btn.active.btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}
+    %input{autocomplete: 'off', checked: 'checked', name: '$2', id: '$2-1', type: 'radio'}
+    $3
+  %label.btn.btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}
+    %input{autocomplete: 'off', name: '$2', id: '$2-2', type: 'radio'}
     $4
-  %label.btn{class: 'btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}'}
-    %input{autocomplete: 'off ', id: '$7 ', name: '$7', type: ' radio'}>/
-    $6
+  %label.btn.btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}
+    %input{autocomplete: 'off', name: '$2', id: '$2-3', type: 'radio'}
+    $5
