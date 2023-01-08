@@ -1,14 +1,14 @@
-%nav{"aria-label": "${1:Page navigation}"}
+%nav{'aria-label': '${1:Page navigation}'}
   %ul.pagination
     %li.page-item.disabled
-      %a.page-link{"aria-label": "${2:Previous}", href: "${3:#}"}
-        %span{"aria-hidden": "true"} «
+      %a.page-link{'aria-label': '${2:Previous}', href: '${3:#}'}
+        %span{'aria-hidden': 'true'} «
         %span.sr-only ${2:Previous}
     %li.page-item.active
-      %a.page-link{href: "${5:#}"} $4
+      %a.page-link{href: '${5:#}'} $4
     %li.page-item
-      %a.page-link{href: "${7:#}"} $6
+      %a.page-link{href: '${7:#}'} $6
     %li.page-item
-      %a.page-link{"aria-label": "${8:Next}", href: "${9:#}"}
-        %span{"aria-hidden": "true"} »
+      %a.page-link{'aria-label': '${8:Next}', href: '${9:#}'}
+        %span{'aria-hidden': 'true'} »
         %span.sr-only ${8:Next}

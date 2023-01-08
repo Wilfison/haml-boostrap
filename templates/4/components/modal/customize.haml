@@ -1,20 +1,21 @@
 / Button trigger modal
-%button.btn.btn-primary.btn-lg{"data-target": "\#${2:modelId}", "data-toggle": "modal", type: "button"}
+%button.btn.btn-primary.btn-lg{'data-target': '\#${2:modelId}', 'data-toggle': 'modal', type: 'button'}
   ${1:Launch}
 / Modal
-.modal.fade{"aria-hidden": "true", "aria-labelledby": "${4:modelTitleId}", id: "${2:modelId}", role: "dialog", tabindex: "-1"}
-  .modal-dialog{role: "document"}
+.modal.fade{'aria-hidden': 'true', 'aria-labelledby': '${4:modelTitleId}', id: '${2:modelId}', role: 'dialog', tabindex: '-1'}
+  .modal-dialog{role: 'document'}
     .modal-content
       .modal-header
         %h5.modal-title ${3:Modal title}
-        %button.close{"aria-label": "Close", "data-dismiss": "modal", type: "button"}
-          %span{"aria-hidden": "true"} ×
+        %button.close{'aria-label': 'Close', 'data-dismiss': 'modal', type: 'button'}
+          %span{'aria-hidden': 'true'} ×
       .modal-body
         .container-fluid
           ${7:Add rows here}
       .modal-footer
-        %button.btn.btn-secondary{"data-dismiss": "modal", type: "button"} ${5:Close}
-        %button.btn.btn-primary{type: "button"} ${6:Save}
+        %button.btn.btn-secondary{'data-dismiss': 'modal', type: 'button'} ${5:Close}
+        %button.btn.btn-primary{type: 'button'} ${6:Save}
+
 :javascript
   $('#exampleModal').on('show.bs.modal', event => {
   	var button = $(event.relatedTarget);

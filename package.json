@@ -13,7 +13,7 @@
     "snippets": [
       {
         "language": "haml",
-        "path": "./snippets/boostrap4.code-snippets"
+        "path": "./snippets/bootstrap4.code-snippets"
       }
     ]
   }

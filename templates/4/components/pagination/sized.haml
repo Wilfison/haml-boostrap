@@ -1,14 +1,14 @@
-%nav{"aria-label": "${1:Page navigation}"}
-  %ul.pagination{class: "pagination-${2:lg|sm}"}
+%nav{'aria-label': '${1:Page navigation}'}
+  %ul.pagination{class: 'pagination-${2:lg|sm}'}
     %li.page-item.disabled
-      %a.page-link{"aria-label": "${3:Previous}", href: "${4:#}"}
-        %span{"aria-hidden": "true"} «
+      %a.page-link{'aria-label': '${3:Previous}', href: '${4:#}'}
+        %span{'aria-hidden': 'true'} «
         %span.sr-only ${3:Previous}
     %li.page-item.active
-      %a.page-link{href: "${6:#}"} $5
+      %a.page-link{href: '${6:#}'} $5
     %li.page-item
-      %a.page-link{href: "${8:#}"} $7
+      %a.page-link{href: '${8:#}'} $7
     %li.page-item
-      %a.page-link{"aria-label": "${9:Next}", href: "${10:#}"}
-        %span{"aria-hidden": "true"} »
+      %a.page-link{'aria-label': '${9:Next}', href: '${10:#}'}
+        %span{'aria-hidden': 'true'} »
         %span.sr-only ${9:Next}

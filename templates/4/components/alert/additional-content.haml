@@ -1,4 +1,4 @@
-.alert.alert-success{role: "alert"}
-  %h4.alert-heading $1
-  %p $2
-  %p.mb-0 $3
+.alert.alert-${1|primary,secondary,success,danger,warning,info,light,dark|}{role: 'alert'}
+  %h4.alert-heading $2
+  %p $3
+  %p.mb-0 $4

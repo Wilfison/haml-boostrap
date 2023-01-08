@@ -1,10 +1,10 @@
 .dropdown.open
-  %button.btn.btn-secondary.dropdown-toggle{"aria-expanded": "false", "aria-haspopup": "true", class: "btn-${2:sm|lg}", "data-toggle": "dropdown", id: "${3:triggerId}", type: "button"}
+  %button.btn.btn-secondary.dropdown-toggle{'aria-expanded': 'false', 'aria-haspopup': 'true', class: 'btn-${2:sm|lg}', 'data-toggle': 'dropdown', id: '${3:triggerId}', type: 'button'}
     ${1:Dropdown}
-  .dropdown-menu{"aria-labelledby": "${3:triggerId}"}
-    %a.dropdown-item{href: "${5:#}"} ${4:Action}
-    %a.dropdown-item.disabled{href: "${7:#}"} ${6:Disabled action}
+  .dropdown-menu{'aria-labelledby': '${3:triggerId}'}
+    %a.dropdown-item{href: '${5:#}'} ${4:Action}
+    %a.dropdown-item.disabled{href: '${7:#}'} ${6:Disabled action}
     %h6.dropdown-header ${8:Section header}
-    %a.dropdown-item{href: "${10:#}"} ${9:Action}
+    %a.dropdown-item{href: '${10:#}'} ${9:Action}
     .dropdown-divider
-    %a.dropdown-item{href: "${12:#}"} ${11:Ater divider action}
+    %a.dropdown-item{href: '${12:#}'} ${11:Ater divider action}

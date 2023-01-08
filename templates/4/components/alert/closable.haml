@@ -1,7 +1,8 @@
-.alert.alert-warning.alert-dismissible.fade.show{role: "alert"}
-  %button.close{"aria-label": "Close", "data-dismiss": "alert", type: "button"}
-    %span{"aria-hidden": "true"} ×
+.alert.alert-${1|primary,secondary,success,danger,warning,info,light,dark|}.alert-dismissible.fade.show{role: 'alert'}
+  %button.close{'aria-label': 'Close', 'data-dismiss': 'alert', type: 'button'}
+    %span{'aria-hidden': 'true'} ×
   %strong $1
   $2
+
 :javascript
-  $(".alert").alert();
+  $('.alert').alert();

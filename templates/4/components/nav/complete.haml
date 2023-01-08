@@ -1,25 +1,26 @@
 / Nav tabs
-%ul.nav{class: "nav-${2:tabs|pills}", id: "${1:navId}"}
+%ul.nav{class: 'nav-${2:tabs|pills}', id: '${1:navId}'}
   %li.nav-item
-    %a.nav-link.active{href: "\#${4:tab1Id}"} ${3:Active}
+    %a.nav-link.active{href: '\#${4:tab1Id}'} ${3:Active}
   %li.nav-item.dropdown
-    %a.nav-link.dropdown-toggle{"aria-expanded": "false", "aria-haspopup": "true", "data-toggle": "dropdown", href: "#", role: "button"} ${5:Dropdown}
+    %a.nav-link.dropdown-toggle{'aria-expanded': 'false', 'aria-haspopup': 'true', 'data-toggle': 'dropdown', href: '#', role: 'button'} ${5:Dropdown}
     .dropdown-menu
-      %a.dropdown-item{href: "\#${7:tab2Id}"} ${6:Action}
-      %a.dropdown-item{href: "\#${9:tab3Id}"} ${8:Another action}
+      %a.dropdown-item{href: '\#${7:tab2Id}'} ${6:Action}
+      %a.dropdown-item{href: '\#${9:tab3Id}'} ${8:Another action}
       .dropdown-divider
-      %a.dropdown-item{href: "\#${11:tab4Id}"} ${10:Action}
+      %a.dropdown-item{href: '\#${11:tab4Id}'} ${10:Action}
   %li.nav-item
-    %a.nav-link{href: "\#${13:tab5Id}"} ${12:Another link}
+    %a.nav-link{href: '\#${13:tab5Id}'} ${12:Another link}
   %li.nav-item
-    %a.nav-link.disabled{href: "#"} ${14:Disabled}
+    %a.nav-link.disabled{href: '#'} ${14:Disabled}
 / Tab panes
 .tab-content
-  .tab-pane.fade.show.active{id: "${4:tab1Id}", role: "tabpanel"} $15
-  .tab-pane.fade{id: "${7:tab2Id}", role: "tabpanel"} $16
-  .tab-pane.fade{id: "${9:tab3Id}", role: "tabpanel"} $17
-  .tab-pane.fade{id: "${11:tab4Id}", role: "tabpanel"} $18
-  .tab-pane.fade{id: "${13:tab5Id}", role: "tabpanel"} $19
+  .tab-pane.fade.show.active{id: '${4:tab1Id}', role: 'tabpanel'} $15
+  .tab-pane.fade{id: '${7:tab2Id}', role: 'tabpanel'} $16
+  .tab-pane.fade{id: '${9:tab3Id}', role: 'tabpanel'} $17
+  .tab-pane.fade{id: '${11:tab4Id}', role: 'tabpanel'} $18
+  .tab-pane.fade{id: '${13:tab5Id}', role: 'tabpanel'} $19
+
 :javascript
   $('#${1:navId} a').click(e => {
   	e.preventDefault();

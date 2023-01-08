@@ -1,14 +1,16 @@
+
 :css
   ${1:div|body} {
   	position: relative;
   }
-\&lt;${1:div|body} data-spy="scroll" data-target="#${2:navId}"&gt;
+\&lt;${1:div|body} data-spy='scroll' data-target='#${2:navId}'&gt;
 $4
-%div{id: "${2:navId}"}
-  %ul.nav.nav-tabs{role: "tablist"}
+%div{id: '${2:navId}'}
+  %ul.nav.nav-tabs{role: 'tablist'}
     $3
 $5
 ${1:div|body}&gt;
+
 :javascript
   $('$1{1:div|body}').scrollspy({
   	target: '#${2:navId}'

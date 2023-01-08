@@ -1,7 +1,7 @@
-.alert.alert-dismissible.fade.show{class: "alert-${2:primary|secondary|success|info|warning|danger|light|dark}", role: "alert"}
-  %button.close{"aria-label": "Close", "data-dismiss": "alert", type: "button"}
-    %span{"aria-hidden": "true"} ×
+.alert.alert-${1|primary,secondary,success,danger,warning,info,light,dark|}.alert-dismissible.fade.show{role: 'alert'}
+  %button.close{'aria-label': 'Close', 'data-dismiss': 'alert', type: 'button'}
+    %span{'aria-hidden': 'true'} ×
     %span.sr-only Close
-  ${1:
+  ${2:
   %strong Holy guacamole!
   You should check in on some of those fields below.}
