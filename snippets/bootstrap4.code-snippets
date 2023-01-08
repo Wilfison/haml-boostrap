@@ -1912,8 +1912,8 @@
       "  ${3:Button name}"
     ]
   },
-  "bs4-4-html5": {
-    "prefix": "bs4-4-html5",
+  "bs4-html5": {
+    "prefix": "!bs4-html5",
     "body": [
       "!!!",
       "%html{lang: \"en\"}",

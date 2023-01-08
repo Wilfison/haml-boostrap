@@ -1,5 +1,6 @@
 #!/bin/ruby
 
+require 'pry'
 require 'json'
 
 def build_body(file_path)
@@ -15,9 +16,9 @@ def build_file_attributes(bs_version, file_path)
   prefix_name = file_name == 'default' ? '' : "-#{file_name}"
   prefix = "bs#{bs_version}#{file_type}#{prefix_name}"
 
-  if prefix_name == 'html5'
+  if file_name == 'html5'
     file_type = ''
-    prefix = "!b4-#{prefix_name}"
+    prefix = "!bs4#{prefix_name}"
   end
 
   {
