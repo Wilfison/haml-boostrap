@@ -88,9 +88,9 @@
     "prefix": "bs4-bgroup",
     "body": [
       ".btn-group{'aria-label': '$2', role: 'group'}",
-      "  %button.btn{class: 'btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|', type: 'button'} $3",
-      "  %button.btn{class: 'btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|', type: 'button'} $4",
-      "  %button.btn{class: 'btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|', type: 'button'} $5"
+      "  %button.btn{class: 'btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}', type: 'button'} $3",
+      "  %button.btn{class: 'btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}', type: 'button'} $4",
+      "  %button.btn{class: 'btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}', type: 'button'} $5"
     ]
   },
   "bs4-bgroup-dropdown-vertical": {
@@ -133,12 +133,12 @@
     "body": [
       ".btn-toolbar{'aria-label': '$1', role: 'toolbar'}",
       "  .btn-group{'aria-label': '$2', role: 'group'}",
-      "    %button.btn{class: 'btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|', type: 'button'} $4",
-      "    %button.btn{class: 'btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|', type: 'button'} $5",
-      "    %button.btn{class: 'btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|', type: 'button'} $6",
+      "    %button.btn{class: 'btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|}', type: 'button'} $4",
+      "    %button.btn{class: 'btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|}', type: 'button'} $5",
+      "    %button.btn{class: 'btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|}', type: 'button'} $6",
       "  .btn-group{'aria-label': '$7', role: 'group'}",
-      "    %button.btn{class: 'btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|', type: 'button'} $8",
-      "    %button.btn{class: 'btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|', type: 'button'} $9"
+      "    %button.btn{class: 'btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|}', type: 'button'} $8",
+      "    %button.btn{class: 'btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|}', type: 'button'} $9"
     ]
   },
   "bs4-breadcrumb": {
@@ -164,13 +164,13 @@
   "bs4-button-a": {
     "prefix": "bs4-button-a",
     "body": [
-      "%a.btn{class: 'btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|', href: '${2:#}', id: '$4', name: '$4', role: 'button'} $1"
+      "%a.btn{class: 'btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|}', href: '${2:#}', id: '$4', name: '$4', role: 'button'} $1"
     ]
   },
   "bs4-button-block": {
     "prefix": "bs4-button-block",
     "body": [
-      "%button.btn{class: 'btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|', id: '$3', name: '$3', type: 'button'}>",
+      "%button.btn{class: 'btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|}', id: '$3', name: '$3', type: 'button'}>",
       "btn-block'&gt;$1"
     ]
   },
@@ -178,13 +178,13 @@
     "prefix": "bs4-button-checkbox",
     "body": [
       ".btn-group{'data-toggle': 'buttons'}",
-      "  %label.btn.active{class: 'btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|'}",
+      "  %label.btn.active{class: 'btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}'}",
       "    %input{autocomplete: 'off', checked: 'checked', id: '$3', name: '$3', type: 'checkbox'}>/",
       "    $2",
-      "  %label.btn{class: 'btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|'}",
+      "  %label.btn{class: 'btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}'}",
       "    %input{autocomplete: 'off', id: '$5', name: '$5', type: 'checkbox'}>/",
       "    $4",
-      "  %label.btn{class: 'btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|'}",
+      "  %label.btn{class: 'btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}'}",
       "    %input{autocomplete: 'off', id: '$7', name: '$7', type: 'checkbox'}>/",
       "    $6"
     ]
@@ -192,7 +192,7 @@
   "bs4-button": {
     "prefix": "bs4-button",
     "body": [
-      "%button.btn{class: 'btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|', type: 'button'} $1"
+      "%button.btn{class: 'btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|}', type: 'button'} $1"
     ]
   },
   "bs4-button-disabled-a": {
@@ -204,26 +204,26 @@
   "bs4-button-input": {
     "prefix": "bs4-button-input",
     "body": [
-      "%input.btn{class: 'btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|', id: '$2', name: '$2', type: 'button', value: '$1'}/"
+      "%input.btn{class: 'btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|}', id: '$2', name: '$2', type: 'button', value: '$1'}/"
     ]
   },
   "bs4-button-outline": {
     "prefix": "bs4-button-outline",
     "body": [
-      "%button.btn{class: 'btn-outline-${2|primary,secondary,success,danger,warning,info,light,dark,link|', type: 'button'} $1"
+      "%button.btn{class: 'btn-outline-${2|primary,secondary,success,danger,warning,info,light,dark,link|}', type: 'button'} $1"
     ]
   },
   "bs4-button-radio": {
     "prefix": "bs4-button-radio",
     "body": [
       ".btn-group{'data-toggle': 'buttons'}",
-      "  %label.btn.active{class: 'btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|'}",
+      "  %label.btn.active{class: 'btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}'}",
       "    %input{autocomplete: 'off', checked: 'checked', id: '$3', name: '$3', type: 'radio'}>/",
       "    $2",
-      "  %label.btn{class: 'btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|'}",
+      "  %label.btn{class: 'btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}'}",
       "    %input{autocomplete: 'off', id: '$5', name: '$5', type: 'radio'}>/",
       "    $4",
-      "  %label.btn{class: 'btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|'}",
+      "  %label.btn{class: 'btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}'}",
       "    %input{autocomplete: 'off ', id: '$7 ', name: '$7', type: ' radio'}>/",
       "    $6"
     ]
@@ -237,7 +237,7 @@
   "bs4-button-toggle": {
     "prefix": "bs4-button-toggle",
     "body": [
-      "%button.btn{'aria-pressed': 'false', autocomplete: 'off', class: 'btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|', 'data-toggle': 'button', type: 'button'} $1"
+      "%button.btn{'aria-pressed': 'false', autocomplete: 'off', class: 'btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|}', 'data-toggle': 'button', type: 'button'} $1"
     ]
   },
   "bs4-card-align": {
@@ -263,7 +263,7 @@
   "bs4-card-background": {
     "prefix": "bs4-card-background",
     "body": [
-      ".card.text-white{class: 'bg-${1|primary,secondary,success,danger,warning,info,light,dark,link|'}",
+      ".card.text-white{class: 'bg-${1|primary,secondary,success,danger,warning,info,light,dark,link|}'}",
       "  %img.card-img-top{alt: '$3', src: '${2:holder.js/100px180/}'}/",
       "  .card-body",
       "    %h4.card-title ${4:Title}",
@@ -285,7 +285,7 @@
   "bs4-card-border": {
     "prefix": "bs4-card-border",
     "body": [
-      ".card{class: 'border-${1|primary,secondary,success,danger,warning,info,light,dark,link|'}",
+      ".card{class: 'border-${1|primary,secondary,success,danger,warning,info,light,dark,link|}'}",
       "  %img.card-img-top{alt: '$3', src: '${2:holder.js/100px180/}'}/",
       "  .card-body",
       "    %h4.card-title ${4:Title}",
@@ -733,7 +733,7 @@
     "prefix": "bs4-dropdown-colored",
     "body": [
       ".dropdown.open",
-      "  %button.btn.dropdown-toggle{'aria-expanded': 'false', 'aria-haspopup': 'true', class: 'btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|', 'data-toggle': 'dropdown', id: '${3:triggerId}', type: 'button'}",
+      "  %button.btn.dropdown-toggle{'aria-expanded': 'false', 'aria-haspopup': 'true', class: 'btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|}', 'data-toggle': 'dropdown', id: '${3:triggerId}', type: 'button'}",
       "    ${1:Dropdown}",
       "  .dropdown-menu{'aria-labelledby': '${3:triggerId}'}",
       "    %a.dropdown-item{href: '${5:#}'} ${4:Action}",
@@ -1054,7 +1054,7 @@
   "bs4-form-reset": {
     "prefix": "bs4-form-reset",
     "body": [
-      "%button.btn{class: 'btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|', type: 'reset'} ${1:Reset}"
+      "%button.btn{class: 'btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|}', type: 'reset'} ${1:Reset}"
     ]
   },
   "bs4-form-select-custom": {
@@ -1094,7 +1094,7 @@
   "bs4-form-submit": {
     "prefix": "bs4-form-submit",
     "body": [
-      "%button.btn{class: 'btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|', type: 'submit'} ${1:Submit}"
+      "%button.btn{class: 'btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|}', type: 'submit'} ${1:Submit}"
     ]
   },
   "bs4-form-textarea": {
