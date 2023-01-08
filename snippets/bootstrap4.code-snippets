@@ -123,7 +123,7 @@
   "bs4-bgroup-size": {
     "prefix": "bs4-bgroup-size",
     "body": [
-      ".btn-group.btn-group-${1:|lg,sm,xs|}{'aria-label': '$2', role: 'group'}",
+      ".btn-group.btn-group-${1|lg,sm,xs|}{'aria-label': '$2', role: 'group'}",
       "  ${3:Add buttons here}"
     ]
   },
@@ -158,13 +158,6 @@
       "  %li.breadcrumb-item",
       "    %a{href: '${4:#}'} $3",
       "  %li.breadcrumb-item.active $5"
-    ]
-  },
-  "bs4-button-a": {
-    "prefix": "bs4-button-a",
-    "body": [
-      "%a.btn.btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|}{href: '${2:#}', id: '$4', name: '$4', role: 'button'}",
-      "  $1"
     ]
   },
   "bs4-button-block": {
@@ -208,6 +201,13 @@
       "%input.btn.btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}{id: '$2', name: '$2', type: 'button', value: ${3:''}}"
     ]
   },
+  "bs4-button-link": {
+    "prefix": "bs4-button-link",
+    "body": [
+      "%a.btn.btn-${3|primary,secondary,success,danger,warning,info,light,dark,link|}{href: ${2:'#'}, id: '$4', name: '$4', role: 'button'}",
+      "  $1"
+    ]
+  },
   "bs4-button-outline": {
     "prefix": "bs4-button-outline",
     "body": [
@@ -220,7 +220,7 @@
       ".btn-group{'data-toggle': 'buttons'}",
       "  %label.btn.active.btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}",
       "    %input{autocomplete: 'off', checked: 'checked', name: '$2', id: '$2-1', type: 'radio'}",
-      "    $4",
+      "    $3",
       "  %label.btn.btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}",
       "    %input{autocomplete: 'off', name: '$2', id: '$2-2', type: 'radio'}",
       "    $4",
@@ -232,30 +232,22 @@
   "bs4-button-sizes": {
     "prefix": "bs4-button-sizes",
     "body": [
-      "%button.btn{class: 'btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|} btn-${3:lg|sm}', type: 'button'} $1"
+      "%button.btn.btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}.btn-${2:lg|sm}{type: 'button'} $3"
     ]
   },
   "bs4-button-toggle": {
     "prefix": "bs4-button-toggle",
     "body": [
-      "%button.btn{'aria-pressed': 'false', autocomplete: 'off', class: 'btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|}', 'data-toggle': 'button', type: 'button'} $1"
-    ]
-  },
-  "bs4-card-align": {
-    "prefix": "bs4-card-align",
-    "body": [
-      ".card{class: 'text-${3:left|center|right}'}",
-      "  %img.card-img-top{alt: '$2', src: '${1:holder.js/100px180/}'}/",
-      "  .card-body",
-      "    %h4.card-title ${4:Title}",
-      "    %p.card-text ${5:Body}"
+      "%button.btn.btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}{'aria-pressed': 'false', autocomplete: 'off', 'data-toggle': 'button', type: 'button'}",
+      "  $2"
     ]
   },
   "bs4-card-background-custom": {
     "prefix": "bs4-card-background-custom",
     "body": [
       ".card{style: 'background-color:${1:cadetblue}; border-color:${2:darkblue};'}",
-      "  %img.card-img-top{alt: '$4', src: '${3:holder.js/100x180/}'}/",
+      "  %img.card-img-top{alt: '$3', src: ${4:image_url('')}}",
+      "",
       "  .card-body",
       "    %h4.card-title ${5:Title}",
       "    %p.card-text ${6:Text}"
@@ -264,8 +256,8 @@
   "bs4-card-background": {
     "prefix": "bs4-card-background",
     "body": [
-      ".card.text-white{class: 'bg-${1|primary,secondary,success,danger,warning,info,light,dark,link|}'}",
-      "  %img.card-img-top{alt: '$3', src: '${2:holder.js/100px180/}'}/",
+      ".card.text-white.bg-${1|primary,secondary,success,danger,warning,info,light,dark,link|}",
+      "  %img.card-img-top{alt: '$3', src: ${2:image_url('')}",
       "  .card-body",
       "    %h4.card-title ${4:Title}",
       "    %p.card-text ${5:Text}"
@@ -287,7 +279,7 @@
     "prefix": "bs4-card-border",
     "body": [
       ".card{class: 'border-${1|primary,secondary,success,danger,warning,info,light,dark,link|}'}",
-      "  %img.card-img-top{alt: '$3', src: '${2:holder.js/100px180/}'}/",
+      "  %img.card-img-top{alt: '$3', src: ${2:image_url('')}/",
       "  .card-body",
       "    %h4.card-title ${4:Title}",
       "    %p.card-text ${5:Text}"
@@ -298,12 +290,12 @@
     "body": [
       ".card-columns",
       "  .card",
-      "    %img.card-img-top{alt: '$2', src: '${1:holder.js/100x180/}'}/",
+      "    %img.card-img-top{alt: '$2', src: ${1:image_url('')}}/",
       "    .card-body",
       "      %h4.card-title ${3:Title}",
       "      %p.card-text ${4:Text}",
       "  .card",
-      "    %img.card-img-top{alt: '$6', src: '${5:holder.js/100x180/}'}/",
+      "    %img.card-img-top{alt: '$6', src: ${5:image_url('')}}/",
       "    .card-body",
       "      %h4.card-title ${7:Title}",
       "      %p.card-text ${8:Text}"
@@ -314,12 +306,12 @@
     "body": [
       ".card-deck",
       "  .card",
-      "    %img.card-img-top{alt: '$2', src: '${1:holder.js/100x180/}'}/",
+      "    %img.card-img-top{alt: '$2', src: ${1:image_url('')}}/",
       "    .card-body",
       "      %h4.card-title ${3:Title}",
       "      %p.card-text ${4:Text}",
       "  .card",
-      "    %img.card-img-top{alt: '$6', src: '${5:holder.js/100x180/}'}/",
+      "    %img.card-img-top{alt: '$6', src: ${5:image_url('')}}/",
       "    .card-body",
       "      %h4.card-title ${7:Title}",
       "      %p.card-text ${8:Text}"
@@ -327,48 +319,6 @@
   },
   "bs4-card": {
     "prefix": "bs4-card",
-    "body": [
-      ".card",
-      "  %img.card-img-top{alt: '$2', src: '${1:holder.js/100x180/}'}/",
-      "  .card-body",
-      "    %h4.card-title ${3:Title}",
-      "    %p.card-text ${4:Text}"
-    ]
-  },
-  "bs4-card-grid": {
-    "prefix": "bs4-card-grid",
-    "body": [
-      ".row",
-      "  %div{class: 'col-${1:xs|sm|md|lg|xl}-${2:1-12}'}",
-      "    .card",
-      "      .card-body",
-      "        %h3.card-title ${3:Title}",
-      "        %p.card-text ${4:Text}",
-      "  %div{class: 'col-${5:xs|sm|md|lg|xl}-${6:1-12}'}",
-      "    .card",
-      "      .card-body",
-      "        %h3.card-title ${7:Title}",
-      "        %p.card-text ${8:Text}"
-    ]
-  },
-  "bs4-card-groups": {
-    "prefix": "bs4-card-groups",
-    "body": [
-      ".card-group",
-      "  .card",
-      "    %img.card-img-top{alt: '${2:Card image cap}', 'data-src': '${1:holder.js/100x180/}'}/",
-      "    .card-body",
-      "      %h4.card-title ${3:Title}",
-      "      %p.card-text ${4:Text}",
-      "  .card",
-      "    %img.card-img-top{alt: '${6:Card image cap}', 'data-src': '${5:holder.js/100x180/}'}/",
-      "    .card-body",
-      "      %h4.card-title ${7:Title}",
-      "      %p.card-text ${8:Text}"
-    ]
-  },
-  "bs4-card-head-foot": {
-    "prefix": "bs4-card-head-foot",
     "body": [
       ".card",
       "  .card-header",
@@ -380,11 +330,44 @@
       "    ${4:Footer}"
     ]
   },
+  "bs4-card-grid": {
+    "prefix": "bs4-card-grid",
+    "body": [
+      ".row",
+      "  .col-${1|xs,sm,md,lg,xl|}-${2|1,2,3,4,5,6,7,8,9,10,11,12|}",
+      "    .card",
+      "      .card-body",
+      "        %h3.card-title ${3:Title}",
+      "        %p.card-text ${4:Text}",
+      "",
+      "  .col-${5|xs,sm,md,lg,xl|}-${6|1,2,3,4,5,6,7,8,9,10,11,12|}",
+      "    .card",
+      "      .card-body",
+      "        %h3.card-title ${7:Title}",
+      "        %p.card-text ${8:Text}"
+    ]
+  },
+  "bs4-card-groups": {
+    "prefix": "bs4-card-groups",
+    "body": [
+      ".card-group",
+      "  .card",
+      "    %img.card-img-top{alt: '${2:Card image cap}', 'data-src': ${1:image_url('')}}",
+      "    .card-body",
+      "      %h4.card-title ${3:Title}",
+      "      %p.card-text ${4:Text}",
+      "  .card",
+      "    %img.card-img-top{alt: '${6:Card image cap}', 'data-src': ${5:image_url('')}}",
+      "    .card-body",
+      "      %h4.card-title ${7:Title}",
+      "      %p.card-text ${8:Text}"
+    ]
+  },
   "bs4-card-links": {
     "prefix": "bs4-card-links",
     "body": [
       ".card",
-      "  %img.card-img-top{alt: '${2:Card image cap}', 'data-src': '${1:holder.js/100x180/?text=Image cap}'}/",
+      "  %img.card-img-top{alt: '${2:Card image cap}', 'data-src': ${1:image_url('')}}",
       "  .card-body",
       "    %h4.card-title ${3:Title}",
       "    %p.card-text ${4:Text}",
@@ -397,7 +380,7 @@
     "prefix": "bs4-card-list",
     "body": [
       ".card",
-      "  %img.card-img-top{alt: '${2:Card image cap}', 'data-src': '${1:holder.js/100x180/?text=Image cap}'}/",
+      "  %img.card-img-top{alt: '${2:Card image cap}', 'data-src': ${1:image_url('')}}",
       "  .card-body",
       "    %h4.card-title ${3:Title}",
       "    %p.card-text ${4:Text}",
@@ -411,7 +394,7 @@
     "prefix": "bs4-card-overlay",
     "body": [
       ".card.bg-dark.text-white",
-      "  %img.card-img{alt: '$2', src: '${1:holder.js/100x180/}'}/",
+      "  %img.card-img{alt: '$2', src: ${1:image_url('')}}/",
       "  .card-img-overlay",
       "    %h4.card-title ${3:Title}",
       "    %p.card-text ${4:Text}"
@@ -441,7 +424,7 @@
       "  .card-body",
       "    %h4.card-title ${1:Title}",
       "    %h6.card-subtitle.text-muted ${2:Subtitle}",
-      "  %img{alt: '$4', src: '${3:holder.js/100x180/}'}/",
+      "  %img{alt: '$4', src: ${3:image_url('')}}",
       "  .card-body",
       "    %p.card-text ${5:Text}",
       "    %a.card-link{href: '${7:#}'} ${6:Link 1}",
@@ -460,6 +443,7 @@
       "        %a.nav-link{href: '${4:#}'} ${3:Tab}",
       "      %li.nav-item",
       "        %a.nav-link.disabled{href: '${6:#}'} ${5:Disabled tab}",
+      "",
       "  .card-body",
       "    %h4.card-title ${7:Title}",
       "    %p.card-text ${8:Body}"
@@ -886,12 +870,12 @@
       ".container",
       "  %form",
       "    .form-group.row",
-      "      %label.col-form-label{class: 'col-sm-${2:1-12}', for: '${6:inputName}'} $1",
-      "      %div{class: 'col-sm-${3:1-12}'}",
+      "      %label.col-form-label{class: 'col-sm-${2|1,2,3,4,5,6,7,8,9,10,11,12|}', for: '${6:inputName}'} $1",
+      "      %div{class: 'col-sm-${3|1,2,3,4,5,6,7,8,9,10,11,12|}'}",
       "        %input.form-control{id: '${6:inputName}', name: '${6:inputName}', placeholder: '$4', type: '${5:text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week}'}/",
       "    %fieldset.form-group.row",
-      "      %legend.col-form-legend{class: 'col-sm-${8:1-12}'} ${7:Group name}",
-      "      %div{class: 'col-sm-${10:1-12}'}",
+      "      %legend.col-form-legend{class: 'col-sm-${8|1,2,3,4,5,6,7,8,9,10,11,12|}'} ${7:Group name}",
+      "      %div{class: 'col-sm-${10|1,2,3,4,5,6,7,8,9,10,11,12|}'}",
       "        $9",
       "    .form-group.row",
       "      %div{class: '${11:offset-sm-2 col-sm-10}'}",
@@ -1226,7 +1210,7 @@
   "bs4-grid-col": {
     "prefix": "bs4-grid-col",
     "body": [
-      "%div{class: 'col-${1:xs|sm|md|lg|xl}-${2:1-12}'}",
+      "%div{class: 'col-${1|xs,sm,md,lg,xl|}-${2|1,2,3,4,5,6,7,8,9,10,11,12|}'}",
       "  $3"
     ]
   },
@@ -1249,7 +1233,7 @@
     "body": [
       ".container",
       "  .row",
-      "    %div{class: 'col-${1:xs|sm|md|lg|xl}-${2:1-12}'}",
+      "    %div{class: 'col-${1|xs,sm,md,lg,xl|}-${2|1,2,3,4,5,6,7,8,9,10,11,12|}'}",
       "      $3",
       "    $4"
     ]
