@@ -1,15 +1,18 @@
 !!!
 %html{lang: 'en'}
   %head
-    %meta{content: 'text/html; charset=UTF-8', 'http-equiv': 'Content-Type'}/
+    %meta{content: 'text/html; charset=UTF-8', 'http-equiv': 'Content-Type'}
     %title ${1:Title}
-    / Required meta tags
-    %meta{charset: 'utf-8'}/
-    %meta{content: 'width=device-width, initial-scale=1, shrink-to-fit=no', name: 'viewport'}/
+
+    %meta{charset: 'utf-8'}
+    %meta{content: 'width=device-width, initial-scale=1, shrink-to-fit=no', name: 'viewport'}
+    %meta{'http-equiv': 'X-UA-Compatible', content: 'IE=edge'}
+
     / Bootstrap CSS
-    %link{crossorigin: 'anonymous', href: '${2:https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css}', integrity: '${3:sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T}', rel: 'stylesheet'}/
+    %link{crossorigin: 'anonymous', href: '${2:https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css}', integrity: '${3:sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T}', rel: 'stylesheet'}
   %body
     $10$END$
+
     / Optional JavaScript
     / jQuery first, then Popper.js, then Bootstrap JS
     %script{crossorigin: 'anonymous', integrity: '${5:sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo}', src: '${4:https://code.jquery.com/jquery-3.3.1.slim.min.js}'}

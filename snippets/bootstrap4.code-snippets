@@ -334,13 +334,13 @@
     "prefix": "bs4-card-grid",
     "body": [
       ".row",
-      "  .col-${1|xs,sm,md,lg,xl|}-${2|1,2,3,4,5,6,7,8,9,10,11,12|}",
+      "  .col-${1|md,xs,sm,lg,xl|}-${2|1,2,3,4,5,6,7,8,9,10,11,12|}",
       "    .card",
       "      .card-body",
       "        %h3.card-title ${3:Title}",
       "        %p.card-text ${4:Text}",
       "",
-      "  .col-${5|xs,sm,md,lg,xl|}-${6|1,2,3,4,5,6,7,8,9,10,11,12|}",
+      "  .col-${5|md,xs,sm,lg,xl|}-${6|1,2,3,4,5,6,7,8,9,10,11,12|}",
       "    .card",
       "      .card-body",
       "        %h3.card-title ${7:Title}",
@@ -1094,7 +1094,7 @@
   "bs4-grid-col": {
     "prefix": "bs4-grid-col",
     "body": [
-      "%div{class: 'col-${1|xs,sm,md,lg,xl|}-${2|1,2,3,4,5,6,7,8,9,10,11,12|}'}",
+      "%div.col-${1|md,xs,sm,lg,xl|}-${2|1,2,3,4,5,6,7,8,9,10,11,12|}",
       "  $3"
     ]
   },
@@ -1117,7 +1117,7 @@
     "body": [
       ".container",
       "  .row",
-      "    %div{class: 'col-${1|xs,sm,md,lg,xl|}-${2|1,2,3,4,5,6,7,8,9,10,11,12|}'}",
+      "    .col-${1|md,xs,sm,lg,xl|}-${2|1,2,3,4,5,6,7,8,9,10,11,12|}",
       "      $3",
       "    $4"
     ]
@@ -1134,7 +1134,7 @@
     "body": [
       ".media",
       "  %a.d-flex.align-self-bottom{href: '${1:#}'}",
-      "    %img{alt: '$3', src: '$2'}/",
+      "    %img{alt: '$3', src: '$2'}",
       "  .media-body",
       "    %h5 ${4:Media heading}",
       "    %p ${5:Media text}"
@@ -1228,21 +1228,21 @@
   "bs4-responsive-hide-down": {
     "prefix": "bs4-responsive-hide-down",
     "body": [
-      ".d-none{class: 'd-${1:sm|md|lg|xl}-block'}",
+      ".d-none.d-${1:sm|md|lg|xl}-block",
       "  $2"
     ]
   },
   "bs4-responsive-hide-up": {
     "prefix": "bs4-responsive-hide-up",
     "body": [
-      "%div{class: 'd-${1:sm|md|lg|xl}-none'}",
+      ".d-${1:sm|md|lg|xl}-none",
       "  $2"
     ]
   },
   "bs4-responsive-print-show": {
     "prefix": "bs4-responsive-print-show",
     "body": [
-      "%div{class: 'd-print-${1:block|inline|inline-block|none}'}",
+      ".d-print-${1:block|inline|inline-block|none}",
       "  $2"
     ]
   },
@@ -1923,15 +1923,18 @@
       "!!!",
       "%html{lang: 'en'}",
       "  %head",
-      "    %meta{content: 'text/html; charset=UTF-8', 'http-equiv': 'Content-Type'}/",
+      "    %meta{content: 'text/html; charset=UTF-8', 'http-equiv': 'Content-Type'}",
       "    %title ${1:Title}",
-      "    / Required meta tags",
-      "    %meta{charset: 'utf-8'}/",
-      "    %meta{content: 'width=device-width, initial-scale=1, shrink-to-fit=no', name: 'viewport'}/",
+      "",
+      "    %meta{charset: 'utf-8'}",
+      "    %meta{content: 'width=device-width, initial-scale=1, shrink-to-fit=no', name: 'viewport'}",
+      "    %meta{'http-equiv': 'X-UA-Compatible', content: 'IE=edge'}",
+      "",
       "    / Bootstrap CSS",
-      "    %link{crossorigin: 'anonymous', href: '${2:https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css}', integrity: '${3:sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T}', rel: 'stylesheet'}/",
+      "    %link{crossorigin: 'anonymous', href: '${2:https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css}', integrity: '${3:sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T}', rel: 'stylesheet'}",
       "  %body",
       "    $10$END$",
+      "",
       "    / Optional JavaScript",
       "    / jQuery first, then Popper.js, then Bootstrap JS",
       "    %script{crossorigin: 'anonymous', integrity: '${5:sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo}', src: '${4:https://code.jquery.com/jquery-3.3.1.slim.min.js}'}",
