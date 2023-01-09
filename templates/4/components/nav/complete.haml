@@ -1,16 +1,16 @@
 / Nav tabs
 %ul.nav{class: 'nav-${2:tabs|pills}', id: '${1:navId}'}
   %li.nav-item
-    %a.nav-link.active{href: '\#${4:tab1Id}'} ${3:Active}
+    %a.nav-link.active{href: '#${4:tab1Id}'} ${3:Active}
   %li.nav-item.dropdown
     %a.nav-link.dropdown-toggle{'aria-expanded': 'false', 'aria-haspopup': 'true', 'data-toggle': 'dropdown', href: '#', role: 'button'} ${5:Dropdown}
     .dropdown-menu
-      %a.dropdown-item{href: '\#${7:tab2Id}'} ${6:Action}
-      %a.dropdown-item{href: '\#${9:tab3Id}'} ${8:Another action}
+      %a.dropdown-item{href: '#${7:tab2Id}'} ${6:Action}
+      %a.dropdown-item{href: '#${9:tab3Id}'} ${8:Another action}
       .dropdown-divider
-      %a.dropdown-item{href: '\#${11:tab4Id}'} ${10:Action}
+      %a.dropdown-item{href: '#${11:tab4Id}'} ${10:Action}
   %li.nav-item
-    %a.nav-link{href: '\#${13:tab5Id}'} ${12:Another link}
+    %a.nav-link{href: '#${13:tab5Id}'} ${12:Another link}
   %li.nav-item
     %a.nav-link.disabled{href: '#'} ${14:Disabled}
 / Tab panes

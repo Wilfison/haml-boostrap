@@ -1,17 +1,20 @@
-%div{'aria-multiselectable': 'true', id: '${1:accordianId}', role: 'tablist'}
+#${1:accordianId}{'aria-multiselectable': 'true', role: 'tablist'}
   .card
-    .card-header{id: '${3:section1HeaderId}', role: 'tab'}
+    .card-header#${3:section1HeaderId}{role: 'tab'}
       %h5.mb-0
-        %a{'aria-controls': '${5:section1ContentId}', 'aria-expanded': 'true', 'data-parent': '\#${1:accordianId}', 'data-toggle': 'collapse', href: '\#${5:section1ContentId}'}
+        %a{'aria-controls': '${5:section1ContentId}', 'aria-expanded': 'true', 'data-parent': '#${1:accordianId}', 'data-toggle': 'collapse', href: '#${5:section1ContentId}'}
           ${2:Section 1}
+
     .collapse.in{'aria-labelledby': '${3:section1HeaderId}', id: '${5:section1ContentId}', role: 'tabpanel'}
       .card-body
         ${4:Section 1 content}
+
   .card
     .card-header{id: '${7:section2HeaderId}', role: 'tab'}
       %h5.mb-0
-        %a{'aria-controls': '${9:section2ContentId}', 'aria-expanded': 'true', 'data-parent': '\#${1:accordianId}', 'data-toggle': 'collapse', href: '\#${9:section2ContentId}'}
+        %a{'aria-controls': '${9:section2ContentId}', 'aria-expanded': 'true', 'data-parent': '#${1:accordianId}', 'data-toggle': 'collapse', href: '#${9:section2ContentId}'}
           ${6:Section 2}
+
     .collapse.in{'aria-labelledby': '${7:section2HeaderId}', id: '${9:section2ContentId}', role: 'tabpanel'}
       .card-body
         ${8:Section 2 content}
