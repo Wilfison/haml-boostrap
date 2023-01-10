@@ -1,0 +1,69 @@
+<!-- data-youtubeid: Set youtube video ID -->
+<button
+  type="button"
+  class="btn btn-danger video-btn"
+  data-bs-toggle="modal"
+  data-youtubeid="${1:uITwtd92r6Y}"
+  data-bs-target="#${2:youtube-modal}"
+>
+  Play Video
+</button>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="${2:youtube-modal}"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body" style="--bs-modal-padding: 0">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          style="position: absolute; right: -30px; top: 0"
+        ></button>
+        <!-- 16:9 aspect ratio -->
+        <div class="ratio ratio-16x9">
+          <iframe
+            class="embed-responsive-item"
+            src=""
+            id="${3:youtube-video}"
+            allowscriptaccess="always"
+            allow="autoplay"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const ytVideoBtns = document.querySelectorAll(".video-btn");
+  const ytVideoElm = document.querySelector("#${3:youtube-video}");
+  const ytModalElm = document.querySelector("#${2:youtube-modal}");
+
+  function setModalVideoSrc({ target }) {
+    const youtubeId = target.dataset.youtubeid;
+    let videoSrc = "https://www.youtube.com/embed/" + youtubeId;
+
+    // set the video src to autoplay and not to show related video.
+    videoSrc += "?autoplay=1&modestbranding=1&showinfo=0";
+
+    ytVideoElm.src = videoSrc;
+  }
+
+  // set video src from the data-src on each button
+  ytVideoBtns.forEach((button) => {
+    button.addEventListener("click", setModalVideoSrc);
+  });
+
+  // stop playing the youtube video when I close the modal
+  ytModalElm.addEventListener("hide.bs.modal", () => {
+    ytVideoElm.src = "";
+  });
+</script>
