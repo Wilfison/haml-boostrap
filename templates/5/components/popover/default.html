@@ -1,0 +1,19 @@
+<button
+  type="button"
+  class="btn btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}"
+  data-bs-container="body"
+  data-bs-toggle="popover"
+  data-bs-placement="${2|top,right,bottom,left|}"
+  data-bs-title="${3:Popover Title}"
+  data-bs-content="${4:Popover Content}"
+>
+  ${5:Popover}
+</button>
+
+<script>
+  document
+    .querySelectorAll('[data-bs-toggle="popover"]')
+    .forEach((popoverEl) => {
+      new bootstrap.Popover(popoverEl);
+    });
+</script>
