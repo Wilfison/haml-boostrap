@@ -3,7 +3,7 @@
   "displayName": "HAML Boostrap 4,5 Snippets",
   "description": "HAML Bootstrap 4,5 Snippets for Vs Code",
   "publisher": "wilfison",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "icon": "images/boostrap.png",
   "engines": {
     "vscode": "^1.74.0"
