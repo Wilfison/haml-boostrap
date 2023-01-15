@@ -1091,161 +1091,6 @@
       "      %a.btn.btn-primary.btn-lg{href: '${5:Jumbo action link}', role: 'button'} ${4:Jumbo action name}"
     ]
   },
-  "bs4-grid-col": {
-    "prefix": "bs4-grid-col",
-    "body": [
-      "%div.col-${1|md,xs,sm,lg,xl|}-${2|1,2,3,4,5,6,7,8,9,10,11,12|}",
-      "  $3"
-    ]
-  },
-  "bs4-grid-container-fluid": {
-    "prefix": "bs4-grid-container-fluid",
-    "body": [
-      ".container-fluid",
-      "  $1"
-    ]
-  },
-  "bs4-grid-container": {
-    "prefix": "bs4-grid-container",
-    "body": [
-      ".container",
-      "  $1"
-    ]
-  },
-  "bs4-grid": {
-    "prefix": "bs4-grid",
-    "body": [
-      ".container",
-      "  .row",
-      "    .col-${1|md,xs,sm,lg,xl|}-${2|1,2,3,4,5,6,7,8,9,10,11,12|}",
-      "      $3",
-      "    $4"
-    ]
-  },
-  "bs4-grid-row": {
-    "prefix": "bs4-grid-row",
-    "body": [
-      ".row",
-      "  $1"
-    ]
-  },
-  "bs4-media-bottom": {
-    "prefix": "bs4-media-bottom",
-    "body": [
-      ".media",
-      "  %a.d-flex.align-self-bottom{href: '${1:#}'}",
-      "    %img{alt: '$3', src: '$2'}",
-      "  .media-body",
-      "    %h5 ${4:Media heading}",
-      "    %p ${5:Media text}"
-    ]
-  },
-  "bs4-media": {
-    "prefix": "bs4-media",
-    "body": [
-      ".media",
-      "  %a.d-flex{href: '${1:#}'}",
-      "    %img{alt: '$3', src: '$2'}/",
-      "  .media-body",
-      "    %h5 ${4:Media heading}",
-      "    ${5:Media text}"
-    ]
-  },
-  "bs4-media-list": {
-    "prefix": "bs4-media-list",
-    "body": [
-      "%ul.list-unstyled",
-      "  %li.media",
-      "    %a.d-flex{href: '${1:#}'}",
-      "      %img{alt: '$3', src: '$2'}/",
-      "    .media-body",
-      "      %h5 ${4:Media heading}",
-      "      ${5:Media text}",
-      "  %li.media",
-      "    %a.d-flex{href: '${6:#}'}",
-      "      %img{alt: '$8', src: '$7'}/",
-      "    .media-body",
-      "      %h5 ${9:Media heading}",
-      "      ${10:Media text}",
-      "  %li.media",
-      "    %a.d-flex{href: '${11:#}'}",
-      "      %img{alt: '$13', src: '$12'}/",
-      "    .media-body",
-      "      %h5 ${14:Media heading}",
-      "      ${15:Media text}"
-    ]
-  },
-  "bs4-media-middle": {
-    "prefix": "bs4-media-middle",
-    "body": [
-      ".media",
-      "  %a.d-flex.align-self-center{href: '${1:#}'}",
-      "    %img{alt: '$3', src: '$2'}/",
-      "  .media-body",
-      "    %h5 ${4:Media heading}",
-      "    %p ${5:Media text}"
-    ]
-  },
-  "bs4-media-nesting": {
-    "prefix": "bs4-media-nesting",
-    "body": [
-      ".media",
-      "  %a.d-flex{href: '${1:#}'}",
-      "    %img{alt: '$3', src: '$2'}/",
-      "  .media-body",
-      "    %h5 ${4:Media heading}",
-      "    ${5:Media text}",
-      "    .media",
-      "      %a.d-flex{href: '${6:#}'}",
-      "        %img{alt: '$8', src: '$7'}/",
-      "      .media-body",
-      "        %h5 ${9:Media heading}",
-      "        ${10:Media text}"
-    ]
-  },
-  "bs4-media-right": {
-    "prefix": "bs4-media-right",
-    "body": [
-      ".media",
-      "  .media-body",
-      "    %h5 ${1:Media heading}",
-      "    ${2:Media text}",
-      "  %a.d-flex{href: '${3:#}'}",
-      "    %img{alt: '$5', src: '$4'}/"
-    ]
-  },
-  "bs4-media-top": {
-    "prefix": "bs4-media-top",
-    "body": [
-      ".media",
-      "  %a.d-flex.align-self-start{href: '${1:#}'}",
-      "    %img{alt: '$3', src: '$2'}/",
-      "  .media-body",
-      "    %h5 ${4:Media heading}",
-      "    %p ${5:Media text}"
-    ]
-  },
-  "bs4-responsive-hide-down": {
-    "prefix": "bs4-responsive-hide-down",
-    "body": [
-      ".d-none.d-${1:sm|md|lg|xl}-block",
-      "  $2"
-    ]
-  },
-  "bs4-responsive-hide-up": {
-    "prefix": "bs4-responsive-hide-up",
-    "body": [
-      ".d-${1:sm|md|lg|xl}-none",
-      "  $2"
-    ]
-  },
-  "bs4-responsive-print-show": {
-    "prefix": "bs4-responsive-print-show",
-    "body": [
-      ".d-print-${1:block|inline|inline-block|none}",
-      "  $2"
-    ]
-  },
   "bs4-list-a": {
     "prefix": "bs4-list-a",
     "body": [
@@ -1357,11 +1202,12 @@
       "/ Button trigger modal",
       "%button.btn.btn-primary.btn-lg{'data-target': '#${2:modelId}', 'data-toggle': 'modal', type: 'button'}",
       "  ${1:Launch}",
+      "",
       "/ Modal",
       ".modal.fade{'aria-hidden': 'true', 'aria-labelledby': '${4:modelTitleId}', id: '${2:modelId}', role: 'dialog', tabindex: '-1'}",
       "  .modal-dialog{role: 'document'}",
       "    .modal-content",
-      "      .modal-header",
+      "      .modal-header#${4:modelTitleId}",
       "        %h5.modal-title ${3:Modal title}",
       "        %button.close{'aria-label': 'Close', 'data-dismiss': 'modal', type: 'button'}",
       "          %span{'aria-hidden': 'true'} ×",
@@ -1940,6 +1786,161 @@
       "    %script{crossorigin: 'anonymous', integrity: '${5:sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo}', src: '${4:https://code.jquery.com/jquery-3.3.1.slim.min.js}'}",
       "    %script{crossorigin: 'anonymous', integrity: '${7:sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1}', src: '${6:https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js}'}",
       "    %script{crossorigin: 'anonymous', integrity: '${9:sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM}', src: '${8:https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js}'}"
+    ]
+  },
+  "bs4-grid-col": {
+    "prefix": "bs4-grid-col",
+    "body": [
+      "%div.col-${1|md,xs,sm,lg,xl|}-${2|1,2,3,4,5,6,7,8,9,10,11,12|}",
+      "  $3"
+    ]
+  },
+  "bs4-grid-container-fluid": {
+    "prefix": "bs4-grid-container-fluid",
+    "body": [
+      ".container-fluid",
+      "  $1"
+    ]
+  },
+  "bs4-grid-container": {
+    "prefix": "bs4-grid-container",
+    "body": [
+      ".container",
+      "  $1"
+    ]
+  },
+  "bs4-grid": {
+    "prefix": "bs4-grid",
+    "body": [
+      ".container",
+      "  .row",
+      "    .col-${1|md,xs,sm,lg,xl|}-${2|1,2,3,4,5,6,7,8,9,10,11,12|}",
+      "      $3",
+      "    $4"
+    ]
+  },
+  "bs4-grid-row": {
+    "prefix": "bs4-grid-row",
+    "body": [
+      ".row",
+      "  $1"
+    ]
+  },
+  "bs4-media-bottom": {
+    "prefix": "bs4-media-bottom",
+    "body": [
+      ".media",
+      "  %a.d-flex.align-self-bottom{href: '${1:#}'}",
+      "    %img{alt: '$3', src: '$2'}",
+      "  .media-body",
+      "    %h5 ${4:Media heading}",
+      "    %p ${5:Media text}"
+    ]
+  },
+  "bs4-media": {
+    "prefix": "bs4-media",
+    "body": [
+      ".media",
+      "  %a.d-flex{href: '${1:#}'}",
+      "    %img{alt: '$3', src: '$2'}/",
+      "  .media-body",
+      "    %h5 ${4:Media heading}",
+      "    ${5:Media text}"
+    ]
+  },
+  "bs4-media-list": {
+    "prefix": "bs4-media-list",
+    "body": [
+      "%ul.list-unstyled",
+      "  %li.media",
+      "    %a.d-flex{href: '${1:#}'}",
+      "      %img{alt: '$3', src: '$2'}/",
+      "    .media-body",
+      "      %h5 ${4:Media heading}",
+      "      ${5:Media text}",
+      "  %li.media",
+      "    %a.d-flex{href: '${6:#}'}",
+      "      %img{alt: '$8', src: '$7'}/",
+      "    .media-body",
+      "      %h5 ${9:Media heading}",
+      "      ${10:Media text}",
+      "  %li.media",
+      "    %a.d-flex{href: '${11:#}'}",
+      "      %img{alt: '$13', src: '$12'}/",
+      "    .media-body",
+      "      %h5 ${14:Media heading}",
+      "      ${15:Media text}"
+    ]
+  },
+  "bs4-media-middle": {
+    "prefix": "bs4-media-middle",
+    "body": [
+      ".media",
+      "  %a.d-flex.align-self-center{href: '${1:#}'}",
+      "    %img{alt: '$3', src: '$2'}/",
+      "  .media-body",
+      "    %h5 ${4:Media heading}",
+      "    %p ${5:Media text}"
+    ]
+  },
+  "bs4-media-nesting": {
+    "prefix": "bs4-media-nesting",
+    "body": [
+      ".media",
+      "  %a.d-flex{href: '${1:#}'}",
+      "    %img{alt: '$3', src: '$2'}/",
+      "  .media-body",
+      "    %h5 ${4:Media heading}",
+      "    ${5:Media text}",
+      "    .media",
+      "      %a.d-flex{href: '${6:#}'}",
+      "        %img{alt: '$8', src: '$7'}/",
+      "      .media-body",
+      "        %h5 ${9:Media heading}",
+      "        ${10:Media text}"
+    ]
+  },
+  "bs4-media-right": {
+    "prefix": "bs4-media-right",
+    "body": [
+      ".media",
+      "  .media-body",
+      "    %h5 ${1:Media heading}",
+      "    ${2:Media text}",
+      "  %a.d-flex{href: '${3:#}'}",
+      "    %img{alt: '$5', src: '$4'}/"
+    ]
+  },
+  "bs4-media-top": {
+    "prefix": "bs4-media-top",
+    "body": [
+      ".media",
+      "  %a.d-flex.align-self-start{href: '${1:#}'}",
+      "    %img{alt: '$3', src: '$2'}/",
+      "  .media-body",
+      "    %h5 ${4:Media heading}",
+      "    %p ${5:Media text}"
+    ]
+  },
+  "bs4-responsive-hide-down": {
+    "prefix": "bs4-responsive-hide-down",
+    "body": [
+      ".d-none.d-${1:sm|md|lg|xl}-block",
+      "  $2"
+    ]
+  },
+  "bs4-responsive-hide-up": {
+    "prefix": "bs4-responsive-hide-up",
+    "body": [
+      ".d-${1:sm|md|lg|xl}-none",
+      "  $2"
+    ]
+  },
+  "bs4-responsive-print-show": {
+    "prefix": "bs4-responsive-print-show",
+    "body": [
+      ".d-print-${1:block|inline|inline-block|none}",
+      "  $2"
     ]
   }
 }

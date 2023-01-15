@@ -14,6 +14,10 @@
       {
         "language": "haml",
         "path": "./snippets/bootstrap4.code-snippets"
+      },
+      {
+        "language": "haml",
+        "path": "./snippets/bootstrap5.code-snippets"
       }
     ]
   }
