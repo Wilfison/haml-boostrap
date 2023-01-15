@@ -1,6 +1,6 @@
 #!/bin/ruby
 
-require 'pry'
+# require 'pry'
 require 'json'
 
 def build_body(file_path)

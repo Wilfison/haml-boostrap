@@ -2,7 +2,9 @@
   "name": "haml-boostrap",
   "displayName": "HAML Boostrap 4,5 Snippets",
   "description": "HAML Bootstrap 4,5 Snippets for Vs Code",
+  "publisher": "wilfison",
   "version": "0.0.1",
+  "icon": "images/boostrap.png",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -20,5 +22,14 @@
         "path": "./snippets/bootstrap5.code-snippets"
       }
     ]
+  },
+  "keywords": [
+    "boostrap",
+    "haml",
+    "snippet"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Wilfison/haml-boostrap.git"
   }
 }
