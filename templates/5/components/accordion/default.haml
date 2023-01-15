@@ -1,16 +1,16 @@
 .accordion#${1:accordion}
   .accordion-item
-    %h2.accordion-header#${2:accordion-1-head}
-      %button.accordion-button{'aria-controls': '${3:accordion-1-collapse}', 'aria-expanded': 'true', 'data-bs-target': '#${3:accordion-1-collapse}', 'data-bs-toggle': 'collapse', type: 'button'}
-        ${4:Item 1}
-    .accordion-collapse.collapse.show#${3:accordion-1-collapse}{'aria-labelledby': '${2:accordion-1-head}', 'data-bs-parent': '#${1:accordion}'}
+    %h2.accordion-header#${1:accordion}-1-head
+      %button.accordion-button{'aria-controls': '${1:accordion}-1-collapse', 'aria-expanded': 'true', 'data-bs-target': '#${1:accordion}-1-collapse', 'data-bs-toggle': 'collapse', type: 'button'}
+        ${2:Item 1}
+    .accordion-collapse.collapse.show#${1:accordion}-1-collapse{'aria-labelledby': '${1:accordion}-1-head', 'data-bs-parent': '#${1:accordion}'}
       .accordion-body
-        $5
+        $3
 
   .accordion-item
-    %h2.accordion-header#${2:accordion-2-head}
-      %button.accordion-button{'aria-controls': '${3:accordion-2-collapse}', 'aria-expanded': 'true', 'data-bs-target': '#${3:accordion-2-collapse}', 'data-bs-toggle': 'collapse', type: 'button'}
-        ${6:Item 2}
-    .accordion-collapse.collapse#${3:accordion-2-collapse}{'aria-labelledby': '${2:accordion-2-head}', 'data-bs-parent': '#${1:accordion}'}
+    %h2.accordion-header#${1:accordion}-2-head
+      %button.accordion-button{'aria-controls': '${1:accordion}-2-collapse', 'aria-expanded': 'true', 'data-bs-target': '#${1:accordion}-2-collapse', 'data-bs-toggle': 'collapse', type: 'button'}
+        ${4:Item 2}
+    .accordion-collapse.collapse#${1:accordion}-2-collapse{'aria-labelledby': '${1:accordion}-2-head', 'data-bs-parent': '#${1:accordion}'}
       .accordion-body
-        $7
+        $5
