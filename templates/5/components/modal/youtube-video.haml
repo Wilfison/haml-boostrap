@@ -1,0 +1,38 @@
+/ data-youtubeid: Set youtube video ID
+%button.btn.btn-danger.video-btn{'data-bs-target': '#${2:youtube-modal}', 'data-bs-toggle': 'modal', 'data-youtubeid': '${1:uITwtd92r6Y}', type: 'button'}
+  Play Video
+
+/ Modal
+.modal.fade#${2:youtube-modal}{'aria-hidden': 'true', role: 'dialog', tabindex: '-1'}
+  .modal-dialog{role: 'document'}
+    .modal-content
+      .modal-body{style: '--bs-modal-padding: 0'}
+        %button.btn-close{'aria-label': 'Close', 'data-bs-dismiss': 'modal', style: 'position: absolute; right: -30px; top: 0', type: 'button'}
+        / 16:9 aspect ratio
+        .ratio.ratio-16x9
+          %iframe.embed-responsive-item{allow: 'autoplay', allowscriptaccess: 'always', id: '${3:youtube-video}', src: ''}
+
+:javascript
+  const ytVideoBtns = document.querySelectorAll('.video-btn');
+  const ytVideoElm = document.querySelector('#${3:youtube-video}');
+  const ytModalElm = document.querySelector('#${2:youtube-modal}');
+
+  function setModalVideoSrc({ target }) {
+    const youtubeId = target.dataset.youtubeid;
+    let videoSrc = 'https://www.youtube.com/embed/' + youtubeId;
+
+    // set the video src to autoplay and not to show related video.
+    videoSrc += '?autoplay=1&modestbranding=1&showinfo=0';
+
+    ytVideoElm.src = videoSrc;
+  }
+
+  // set video src from the data-src on each button
+  ytVideoBtns.forEach((button) => {
+    button.addEventListener('click', setModalVideoSrc);
+  });
+
+  // stop playing the youtube video when I close the modal
+  ytModalElm.addEventListener('hide.bs.modal', () => {
+    ytVideoElm.src = '';
+  });

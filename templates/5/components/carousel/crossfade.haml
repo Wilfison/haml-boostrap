@@ -1,0 +1,18 @@
+.carousel.slide.carousel-fade{'data-bs-ride': 'carousel', id: '${1:carousel}'}
+  .carousel-inner
+    .carousel-item.active
+      %img.d-block.w-100{alt: '${2:#}', src: ${1:image_url('')}}/
+
+    .carousel-item
+      %img.d-block.w-100{alt: '${4:#}', src: ${3:image_url('')}}/
+
+    .carousel-item
+      %img.d-block.w-100{alt: '${6:#}', src: ${5:image_url('')}}/
+
+  %button.carousel-control-prev{'data-bs-slide': 'prev', 'data-bs-target': '#$1', type: 'button'}
+    %span.carousel-control-prev-icon{'aria-hidden': 'true'}
+    %span.visually-hidden Previous
+
+  %button.carousel-control-next{'data-bs-slide': 'next', 'data-bs-target': '#$1', type: 'button'}
+    %span.carousel-control-next-icon{'aria-hidden': 'true'}
+    %span.visually-hidden Next

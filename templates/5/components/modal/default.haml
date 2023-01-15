@@ -1,0 +1,17 @@
+/ Button trigger modal
+%button.btn.btn-primary{'data-bs-target': '#${1:modal}', 'data-bs-toggle': 'modal', type: 'button'}
+  ${2:Launch modal}
+/ Modal
+
+.modal.fade#${1:modal}{'aria-hidden': 'true', 'aria-labelledby': '${1:modal}-label', tabindex: '-1'}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %h1.modal-title.fs-5{id: '${1:modal}-label'} ${3:Modal title}
+        %button.btn-close{'aria-label': 'Close', 'data-bs-dismiss': 'modal', type: 'button'}
+      .modal-body
+        $0
+      .modal-footer
+        %button.btn.btn-secondary{'data-bs-dismiss': 'modal', type: 'button'}
+          Close
+        %button.btn.btn-primary{type: 'button'} Save changes

@@ -1,0 +1,32 @@
+.carousel.slide{'data-bs-ride': 'false', id: '${1:carousel}'}
+  .carousel-indicators
+    %button.active{'aria-current': 'true', 'aria-label': 'Slide 1', 'data-bs-slide-to': '0', 'data-bs-target': '#$1', type: 'button'}
+    %button{'aria-label': 'Slide 2', 'data-bs-slide-to': '1', 'data-bs-target': '#$1', type: 'button'}
+    %button{'aria-label': 'Slide 3', 'data-bs-slide-to': '2', 'data-bs-target': '#$1', type: 'button'}
+
+  .carousel-inner
+    .carousel-item.active
+      %img.d-block.w-100{alt: '${2:#}', src: ${1:image_url('')}}
+      .carousel-caption.d-none.d-md-block
+        %h5 First slide label
+        %p Some representative placeholder content for the first slide.
+
+    .carousel-item
+      %img.d-block.w-100{alt: '${4:#}', src: ${3:image_url('')}}
+      .carousel-caption.d-none.d-md-block
+        %h5 Second slide label
+        %p Some representative placeholder content for the second slide.
+
+    .carousel-item
+      %img.d-block.w-100{alt: '${6:#}', src: ${5:image_url('')}}
+      .carousel-caption.d-none.d-md-block
+        %h5 Third slide label
+        %p Some representative placeholder content for the third slide.
+
+  %button.carousel-control-prev{'data-bs-slide': 'prev', 'data-bs-target': '#$1', type: 'button'}
+    %span.carousel-control-prev-icon{'aria-hidden': 'true'}
+    %span.visually-hidden Previous
+
+  %button.carousel-control-next{'data-bs-slide': 'next', 'data-bs-target': '#$1', type: 'button'}
+    %span.carousel-control-next-icon{'aria-hidden': 'true'}
+    %span.visually-hidden Next

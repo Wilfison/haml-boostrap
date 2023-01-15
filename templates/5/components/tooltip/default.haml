@@ -1,0 +1,10 @@
+%button.btn.btn-secondary{'data-bs-placement': '${1|top,right,bottom,left|}', 'data-bs-title': '${2:Boostrap tooltip}', 'data-bs-toggle': 'tooltip', type: 'button'}
+  ${3:Show tooltip}
+/ Enable tooltips
+
+:javascript
+  document
+    .querySelectorAll('[data-bs-toggle='tooltip']')
+    .forEach((tooltipEl) => {
+      new bootstrap.Tooltip(tooltipEl);
+    });

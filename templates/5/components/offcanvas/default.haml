@@ -1,0 +1,9 @@
+%button.btn.btn-primary{'aria-controls': '${1:offcanvas}', 'data-bs-target': '#${1:offcanvas}', 'data-bs-toggle': 'offcanvas', type: 'button'}
+  ${2:Open Offcanvas}
+
+.offcanvas#${1:offcanvas}{'aria-labelledby': '${1:offcanvas}-label', class: 'offcanvas-${3|start,end,top,bottom|}', tabindex: '-1'}
+  .offcanvas-header
+    %h5.offcanvas-title#${1:offcanvas}-label ${3:Offcanvas}
+    %button.btn-close{'aria-label': 'Close', 'data-bs-dismiss': 'offcanvas', type: 'button'}
+  .offcanvas-body
+    %div ${4:Some text as placeholder.}

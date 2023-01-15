@@ -1,0 +1,42 @@
+%nav.navbar.navbar-expand-lg.fixed-top.bg-light
+  .container-fluid
+    %a.navbar-brand{href: '/'}
+      = image_tag '${1:brand/logo.svg}', alt: '$2', height: '24'
+
+    %button.navbar-toggler{'aria-controls': 'main-navbar', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation', 'data-bs-target': '#main-navbar', 'data-bs-toggle': 'collapse', type: 'button'}
+      %span.navbar-toggler-icon
+    #main-navbar.collapse.navbar-collapse
+      %ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        %li.nav-item
+          %a.nav-link.active{'aria-current': 'page', href: '#'} Home
+        %li.nav-item
+          %a.nav-link{href: '#'} Link
+        %li.nav-item.dropdown
+          %a.nav-link.dropdown-toggle{'aria-expanded': 'false', 'data-bs-toggle': 'dropdown', href: '#', role: 'button'}
+            Dropdown
+          %ul.dropdown-menu
+            %li
+              %a.dropdown-item{href: '#'} Action
+            %li
+              %a.dropdown-item{href: '#'} Another action
+            %li
+              %hr.dropdown-divider/
+            %li
+              %a.dropdown-item{href: '#'} Something else here
+
+      %form.d-flex{role: 'search'}
+        .input-group
+          %input.form-control{'aria-describedby': 'basic-addon1', 'aria-label': 'Search', placeholder: 'Search', type: 'text'}/
+          %button#basic-addon1.input-group-text{type: 'submit'}
+            %svg.bi.bi-search{fill: 'currentColor', height: '16', viewbox: '0 0 16 16', width: '16', xmlns: 'http://www.w3.org/2000/svg'}
+              %path{d: 'M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'}
+
+      %ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+        %li.nav-item.dropstart
+          %a.nav-link.dropdown-toggle{'aria-expanded': 'false', 'data-bs-toggle': 'dropdown', href: '#', role: 'button'}
+            %svg.bi.bi-person-circle{fill: 'currentColor', height: '16', viewbox: '0 0 16 16', width: '16', xmlns: 'http://www.w3.org/2000/svg'}
+              %path{d: 'M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z'}
+              %path{d: 'M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z', 'fill-rule': 'evenodd'}
+          %ul.dropdown-menu
+            %li
+              %a.dropdown-item{href: '#'} Logout

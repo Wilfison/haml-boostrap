@@ -1,0 +1,6 @@
+%div.${1|dropdown,dropup,dropend,dropstart|}
+  %button.btn.dropdown-toggle{'aria-expanded': 'false', class: 'btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|}', 'data-bs-toggle': 'dropdown', type: 'button'}
+    ${3:Dropdown}
+  %ul.dropdown-menu
+    %li
+      %a.dropdown-item{href: '$4'} $5

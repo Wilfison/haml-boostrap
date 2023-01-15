@@ -1,0 +1,10 @@
+.dropdown
+  %button.btn.btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}.dropdown-toggle{'aria-expanded': 'false', 'data-bs-toggle': 'dropdown', type: 'button'}
+    ${2:Dropdown}
+  %ul.dropdown-menu
+    %li
+      %a.dropdown-item{href: '$3'} $4
+      %a.dropdown-item{href: '$5'} $6
+    %li
+      %hr.dropdown-divider/
+    %a.dropdown-item{href: '$7'} $8

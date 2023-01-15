@@ -1,0 +1,22 @@
+.card
+  .card-header
+    %ul.nav.nav-tabs{id: '${1:my-tab}', role: 'tablist'}
+      %li.nav-item{role: 'presentation'}
+        %button.nav-link.active{'aria-controls': '$2-tab-pane', 'aria-selected': 'true', 'data-bs-target': '#$2-tab-pane', 'data-bs-toggle': 'tab', id: '$2-tab', role: 'tab', type: 'button'} $2
+
+      %li.nav-item{role: 'presentation'}
+        %button.nav-link{'aria-controls': '$3-tab-pane', 'aria-selected': 'false', 'data-bs-target': '#$3-tab-pane', 'data-bs-toggle': 'tab', id: '$3-tab', role: 'tab', type: 'button'} $3
+
+      %li.nav-item{role: 'presentation'}
+        %button.nav-link{'aria-controls': '$4-tab-pane', 'aria-selected': 'false', 'data-bs-target': '#$4-tab-pane', 'data-bs-toggle': 'tab', id: '$4-tab', role: 'tab', type: 'button'} $4
+
+  .card-body
+    .tab-content{id: '${1:my-tab}-content'}
+      .tab-pane.fade.show.active{'aria-labelledby': '$2-tab', id: '$2-tab-pane', role: 'tabpanel', tabindex: '0'}
+        %h5.card-title $2 Content
+
+      .tab-pane.fade{'aria-labelledby': '$3-tab', id: '$3-tab-pane', role: 'tabpanel', tabindex: '0'}
+        %h5.card-title $3 Content
+
+      .tab-pane.fade{'aria-labelledby': '$4-tab', id: '$4-tab-pane', role: 'tabpanel', tabindex: '0'}
+        %h5.card-title $4 Content

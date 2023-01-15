@@ -1,0 +1,10 @@
+.carousel.slide{'data-bs-ride': 'carousel', id: '${1:carousel}'}
+  .carousel-inner
+    .carousel-item.active
+      %img.d-block.w-100{alt: '${2:#}', src: ${1:image_url('')}}/
+
+    .carousel-item
+      %img.d-block.w-100{alt: '${4:#}', src: ${3:image_url('')}}/
+
+    .carousel-item
+      %img.d-block.w-100{alt: '${6:#}', src: ${5:image_url('')}}/

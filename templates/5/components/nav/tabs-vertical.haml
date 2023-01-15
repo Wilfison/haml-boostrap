@@ -1,0 +1,19 @@
+.d-flex.align-items-start.gap-3
+  %ul.nav.flex-column.nav-pills.me-3#${1:navtab}{role: 'tablist'}
+    %li.nav-item{role: 'presentation'}
+      %button.nav-link.active#${2:home}-tab{'aria-controls': '${2:home}-tab-pane', 'aria-selected': 'true', 'data-bs-target': '#${2:home}-tab-pane', 'data-bs-toggle': 'tab', role: 'tab', type: 'button'}
+        ${2:Home}
+    %li.nav-item{role: 'presentation'}
+      %button.nav-link#${3:profile}-tab{'aria-controls': '${3:profile}-tab-pane', 'aria-selected': 'false', 'data-bs-target': '#${3:profile}-tab-pane', 'data-bs-toggle': 'tab', role: 'tab', type: 'button'}
+        ${3:Profile}
+    %li.nav-item{role: 'presentation'}
+      %button.nav-link#${4:contact}-tab{'aria-controls': '${4:contact}-tab-pane', 'aria-selected': 'false', 'data-bs-target': '#${4:contact}-tab-pane', 'data-bs-toggle': 'tab', role: 'tab', type: 'button'}
+        ${4:Contact}
+
+  .tab-content#${1:navtab}-content
+    .tab-pane.fade.show.active#${2:home}-tab-pane{'aria-labelledby': '${2:home}-tab', role: 'tabpanel', tabindex: '0'}
+      $5
+    .tab-pane.fade#${3:profile}-tab-pane{'aria-labelledby': '${3:profile}-tab', role: 'tabpanel', tabindex: '0'}
+      $6
+    .tab-pane.fade#${4:contact}-tab-pane{'aria-labelledby': '${4:contact}-tab', role: 'tabpanel', tabindex: '0'}
+      $7
